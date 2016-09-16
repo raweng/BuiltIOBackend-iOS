@@ -36,6 +36,6 @@ s.resources = 'BuiltIOSDK/BuiltIO.bundle'
 
 s.frameworks = 'Accounts', 'CFNetwork', 'CoreData', 'CoreGraphics', 'CoreLocation', 'CoreTelephony', 'MobileCoreServices', 'QuartzCore', 'Security', 'Social', 'SystemConfiguration'
 s.libraries = 'icucore', 'sqlite3'
-s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+# s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
 end
