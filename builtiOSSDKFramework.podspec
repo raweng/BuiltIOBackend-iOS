@@ -25,7 +25,7 @@ We feature a complete set of functionalities, such as:
 DESC
 
 s.homepage         = 'https://github.com/raweng/builtiOSSDKFramework'
-s.license          = 'COMMERCIAL'
+s.license          ={ COMMERCIAL => 'https://www.built.io' }
 s.author           = { 'Built.io' => 'info@built.io' }
 s.source           = { :git => 'https://github.com/raweng/builtiOSSDKFramework.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/builtio'
