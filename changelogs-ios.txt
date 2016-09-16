@@ -1,0 +1,232 @@
+
+Version: 2.2.1
+Date: 14-June-2016
+
+API deprecation:
+
+	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
+	
+	*BuiltObject:
+		- Deprecated method 'pushValue:atIndex:forKey'
+		- Deprecated method 'pullValueAtIndex:forKey'
+
+	*BuiltGroup:
+		- Deprecated method 'pushValue:atIndex:forKey'
+		- Deprecated method 'pullValueAtIndex:forKey'
+
+
+====================================================================================
+
+Version: 2.2.0
+Date: 18-April-2016
+
+New Features:
+
+	*BuiltKeyStore
+		- New class introduced
+
+	*BuiltConfig
+		- New class introduced
+
+	*BuiltSyncResult
+		- New class introduced
+
+	*Built:
+		- Added method 'applicationWithAPIKey:withConfig:'
+
+	*BuiltApplication:
+		- Added property 'keystore'
+		- Added method 'clearOfflineData'
+		- Added method 'clearOfflineDataOfOnly:'
+		- Added method 'clearOfflineDataExcept:'
+		- Added method 'sync'
+		- Added method 'sync:'
+		- Added method 'syncOnly'
+		- Added method 'syncOnly:date:'
+		- Added method 'syncExcept'
+		- Added method 'syncExcept:date:'
+
+	*BuiltObject:
+		- Added method 'offline'
+
+	*BuiltQuery:
+		- Added method 'offline'
+
+Modifications:
+
+	*QueryResult
+		- method 'count' will return count of objects or total objects count as per the BuiltQuery.
+
+API deprecation:
+
+	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
+	
+	*Built:
+		- Deprecated method 'applicationWithAPIKey:hostName:'
+		- Deprecated method 'applicationWithAPIKey:hostName:isSSL:'
+		- Deprecated method 'userMetricsDisable'
+
+	*BuiltApplication:
+		- Deprecated method 'setRealtimeHost:withPort:isSSL:'
+		- Deprecated methog 'notification'
+		- Deprecated property 'realtimeHost'
+		- Deprecated property 'realtimeSSL'
+		- Deprecated property 'realtimePort'
+		- Deprecated property 'version'
+		- Deprecated property 'url'
+
+	*BuiltNotification:
+		- Deprecated entire class
+
+	*QueryResult:
+		- Deprecated method 'totalCount'
+		- Deprecated method 'allObjects'
+
+	*BuiltObject:
+		- Deprecated method 'multiplyKey:by:'
+		- Deprecated method 'divideKey:by:'
+
+	*BuiltQuery:
+		- Deprecated method 'beforeUID:'
+		- Deprecated method 'afterUID:'
+
+=================================================================================
+
+Version: 2.1.1
+Date: 19-August-2015
+
+New Features:
+
+	*BuiltUser:
+		- Added method 'refreshUserInfo:'
+		- Added method 'refreshUserInfoInBackgroundWithCompletion:'
+
+	*BuiltObject:
+		- Added method 'includeOnlyFields:'
+		- Added method 'includeAllFieldsExcept:'
+		- Added method 'includeRefFieldWithKey:'
+		- Added method 'includeRefFieldWithKey:andOnlyRefValuesWithKeys:'
+		- Added method 'includeRefFieldWithKey:excludingRefValuesWithKeys:'
+
+Modifications:
+
+	*BuiltUser
+		- refactored completion block of loginInBackgroundWithAnyAuthName:withParameter:completion:
+
+Bug Fixes:
+
+	*BuiltACL
+		- fix issue causing multiple permission for Others and Anonymous doesnt work as aspected.
+
+API deprecation:
+
+	*BuiltQuery:
+		- Deprecated method 'includeKey:andValue:'
+		- Deprecated method 'removeKey:'
+
+====================================================================================
+
+Version: 2.1.0
+Date: 21-July-2015
+
+New Features:
+	*Built
+		- Added class method 'userMetricsDisable:'
+		- Added method 'applicationWithAPIKey:hostName:' and 'applicationWithAPIKey:hostName:isSSL:'
+
+	*BuiltUserPresence:
+		- Added method 'acceptRequests'
+		- Added method 'addUserUidInWhiteList:'
+		- Added method 'removeUserUidFromWhiteList:'
+
+	*BuiltUser:
+		- Added 'EventTypePresence' in enum EventType
+
+	*BuiltRole:
+		- Added method 'addUsers:'
+		- Added method 'removeUsers:' 
+		- Added method 'addRoles:'
+		- Added method 'removeRoles:' 
+
+	*BuiltACL:
+		- Added method 'setAnonymousReadAccess:'
+		- Added method 'getAnonymousReadAccess'
+		- Added method 'setAnonymousWriteAccess:'
+		- Added method 'getAnonymousWriteAccess'
+		- Added method 'setAnonymousDeleteAccess:'
+		- Added method 'getAnonymousDeleteAccess'
+
+	*BuiltApplication:
+		- Added method 'fetchClassesSchema:' and 'fetchClassesSchemaInBackgroundWithCompletion:'	
+		- Added property 'trackAnonymously'
+
+	*BuiltAnalytics:
+		- Added method 'registerDynamicPropertiesWithBlock:'	
+
+	*BuiltObject:
+		- Added method 'addGroup:'
+		- Added method 'addGroupMultiple:'	
+		- Added method 'includeRefFieldWithKey:'
+
+	*BuiltQuery:
+		- Added method 'rawQueryString'	
+
+	*BuiltGroup:
+		- new class introduced	
+
+	*BuiltGroupMultiple:
+		- new class introduced	
+		
+Modifications:
+	*BuiltObject:
+		- renamed method 'upsert:forReferenceField:newDictionary' to 'addUpsertForReferenceField:condition:replaceWith:'
+
+	*BuiltUser
+		- renamed method 'requestForPresenceOnCompletion:' to 'requestPresenceAccessOnCompletion:'
+		- renamed 'signUp:' to 'registerUser:'
+		- renamed 'signUpInBackgroundWithCompletion:' to 'registerUserInBackgroundWithCompletion:'
+		- changed following methods return type to void
+			- signUp:
+			- loginWithEmail:andPassword:error:
+			- loginWithGoogleAuthAccessToken:error:
+			- loginWithFacebookAccessToken:error:
+			- loginWithTwitterAccount:consumerKey:consumerSecret:error:
+		
+	*BuiltUserPresence
+		- removed 'privacyType' property and enum, use 'isPublic' property instead.
+
+
+Bug Fixes:
+	*BuiltUser:
+		- fix issue causing BuiltObject's methods not executing as expected.
+
+	*BuiltQuery:	
+		- fix issue causing Query to not return any error when there is no active internet connection.
+
+API deprecation:
+	*BuiltObject:
+		- Deprecated method 'upsert:forReferenceField:newDictionary'
+
+	*BuiltUser:
+		- Deprecated method 'onPresenceChange:'
+		- Deprecated method 'requestForPresenceOnCompletion:'
+		- Deprecated method 'query'
+
+	*BuiltPresence:
+		- Deprecated property 'privacyType'	
+
+	*BuiltApplication:
+		- Deprecated method 'setHostname:isSSL:'	
+
+	*BuiltRole
+		- Deprecated method 'query'	
+	
+
+====================================================================================
+
+Version: 2.0.0
+Date: 11-May-2015
+
+Changes
+- New structure 
+- Points to Built.io Backend API version v2
