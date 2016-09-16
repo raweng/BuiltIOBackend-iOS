@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
 s.name             = 'BuiltIO'
 s.version          = '2.2.1'
-s.summary          = 'The builtIO backend SDK helps you to create apps quickly and effortlessly, taking care of all the backend requirements.'
+s.summary          = 'The BuiltIO Backend helps you to create apps quickly and effortlessly, taking care of all the backend requirements.'
 
 s.description      = <<-DESC
-TODO: This SDK, or a software development kit, is like a gift box that comes with a set of software and other tools that are required to develop an application for a specific platform. With this SDK, you can now focus solely on the client side of development!
+This SDK, or a software development kit, is like a gift box that comes with a set of software and other tools that are required to develop an application for a specific platform. With this SDK, you can now focus solely on the client side of development!
 Built.io Backend works by connecting your app with our servers, using builtIO Backend SDK  or REST APIs. You can then use Built.io Backend as your datastore, rely on it for your data validation and security needs, upload files, send push notifications…in short, you can do everything that you used to rely on a backend for without having to build it yourself!
 
 We feature a complete set of functionalities, such as:
@@ -18,10 +18,10 @@ We feature a complete set of functionalities, such as:
 * Push Notifications to iOS and Android devices
 DESC
 
-s.homepage         = 'https://github.com/raweng/builtiOSSDKFramework'
+s.homepage         = 'https://www.built.io/products/backend/overview'
 s.license          =  { :type => 'Commercial',:text => 'See https://www.built.io/'}
 s.author           = { 'Built.io' => 'info@built.io' }
-s.source           = { :git => 'https://github.com/raweng/builtiOSSDKFramework.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/raweng/BuiltIOBackend-iOS.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/builtio'
 
 s.ios.deployment_target = '7.0'
