@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'builtiOSSDKFramework'
-s.version          = '0.0.1'
+s.version          = '0.0.2'
 s.summary          = 'The builtiOSSDKFramework helps you create apps quickly and effortlessly, taking care of all the backend requirements.'
 
 # This description is used to generate tags and improve search results.
