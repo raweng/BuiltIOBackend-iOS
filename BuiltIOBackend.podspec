@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-s.name             = 'BuiltIO'
+s.name             = 'BuiltIOBackend'
 s.version          = '2.2.1'
 s.summary          = 'The BuiltIO Backend helps you to create apps quickly and effortlessly, taking care of all the backend requirements.'
 
@@ -19,7 +19,7 @@ We feature a complete set of functionalities, such as:
 DESC
 
 s.homepage         = 'https://www.built.io/products/backend/overview'
-s.license          =  { :type => 'Commercial',:text => 'See https://www.built.io/'}
+s.license          = { :type => 'Commercial',:text => 'See https://www.built.io/'}
 s.author           = { 'Built.io' => 'info@built.io' }
 s.source           = { :git => 'https://github.com/raweng/BuiltIOBackend-iOS.git', :tag => s.version.to_s }
 s.social_media_url = 'https://twitter.com/builtio'
