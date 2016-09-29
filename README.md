@@ -17,7 +17,6 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
     - CoreGraphics.framework
     - CoreLocation.framework
     - CoreTelephony.framework
-    - CoreDara.framework
     - MobileCoreServices.framework
     - QuartzCore.framework
     - Security.framework
