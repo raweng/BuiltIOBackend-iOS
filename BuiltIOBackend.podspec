@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BuiltIOBackend'
-s.version          = '2.2.1'
+s.version          = '3.0.0'
 s.summary          = 'The BuiltIO Backend helps you to create apps quickly and effortlessly, taking care of all the backend requirements.'
 
 s.description      = <<-DESC
@@ -25,11 +25,17 @@ s.source           = { :git => 'https://github.com/raweng/BuiltIOBackend-iOS.git
 s.social_media_url = 'https://twitter.com/builtio'
 
 s.ios.deployment_target = '7.0'
-s.ios.vendored_frameworks = 'SDK/BuiltIO.framework'
-s.resources = 'SDK/BuiltIO.bundle'
+s.watchos.deployment_target = '2.0' 
 
-s.frameworks = 'Accounts', 'CFNetwork', 'CoreData', 'CoreGraphics', 'CoreLocation', 'CoreTelephony', 'MobileCoreServices', 'QuartzCore', 'Security', 'Social', 'SystemConfiguration'
+s.ios.vendored_frameworks = 'SDK/iOS/BuiltIO.framework'
+s.watchos.vendored_frameworks = 'SDK/watchOS/BuiltIO.framework'
+
+s.watchos.frameworks =  'CoreGraphics','CoreLocation','MobileCoreServices', 'Security'
+
+s.ios.frameworks = 'Accounts','CFNetwork','CoreData','CoreGraphics','CoreLocation','CoreTelephony', 'MobileCoreServices','QuartzCore','Security', 'Social','SystemConfiguration'
+
 s.libraries = 'icucore', 'sqlite3'
+
 s.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
 
 end

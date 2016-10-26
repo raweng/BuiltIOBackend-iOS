@@ -1,4 +1,83 @@
 
+Version: 3.0.0
+Date: 26-Oct-2016
+
+NOTE: 
+	- Synchronous methods from all class is been removed.
+	- Deprecated methods from all class is been removed.
+
+Modifications:
+
+	*BuiltApplication:
+		- renamed 'fetchApplicationInfoInBackgroundWithCompletion:' to 'fetchApplicationInfo:'
+		- renamed 'fetchLastActivityOfClassesInBackgroundWithCompletion:' to 'fetchLastActivityOfClasses:'
+		- renamed 'fetchClassesSchemaInBackgroundWithCompletion:' to 'fetchClassesSchema:'
+
+	*BuiltClass:
+		- renamed 'fetchSchemaInBackgroundWithCompletion:' to 'fetchSchema:'
+
+	*BuiltExtension:
+		- renamed 'executeInBackgroundWithData:' to 'executeWithData:'
+
+	*BuiltObject:
+		- renamed 'fetchInBackgroundWithCompletion:' to 'fetch:'
+		- renamed 'saveInBackgroundWithCompletion:' to 'save:'
+		- renamed 'saveEventuallyInBackgroundWithCompletion:' to 'saveEventually:'
+		- renamed 'saveAsDraftInBackgroundWithCompletion:' to 'saveAsDraft:'		
+		- renamed 'saveAsDraftEventuallyInBackgroundWithCompletion:' to 'saveAsDraftEventually:'
+		- renamed 'destroyInBackgroundWithCompletion:' to 'destroy:'
+		- renamed 'destroyEventuallyInBackgroundWithCompletion:' to 'destroyEventually:'
+		- renamed 'includeRefFieldWithKey:' to 'includeReference:'
+		- renamed 'includeRefFieldWithKey:andOnlyRefValuesWithKeys:' to 'includeReference:onlyFields:'
+		- renamed 'includeRefFieldWithKey:excludingRefValuesWithKeys:' to 'includeReference:excludingFields:'
+
+
+	*BuiltInstallation:
+		- renamed 'createInstallationInBackgroundWithSubscriptionChannels:completion:' to 'createInstallationWithSubscriptionChannels:completion:'
+		- renamed 'updateInstallationInBackgroundWithCompletion:' to 'updateInstallation:'
+		- renamed 'subscribeToChannelsInBackground:completion:' to 'subscribeToChannels:completion:'
+		- renamed 'unsubscribeToChannelsInBackground:completion:' to 'unsubscribeToChannels:completion:'
+		
+	*BuiltUser:
+		- renamed 'registerUserInBackgroundWithCompletion:' to 'registerUser:'
+		- renamed 'loginInBackgroundWithEmail:andPassword:completion:' to 'loginWithEmail:andPassword:completion:'
+		- renamed 'loginInBackgroundWithGoogleAuthAccessToken:completion:' to 'loginWithGoogleAuthAccessToken:completion:'
+		- renamed 'loginInBackgroundWithFacebookAccessToken:completion:' to 'loginWithFacebookAccessToken:completion:'
+		- renamed 'loginInBackgroundWithTwitterAccount:consumerKey:consumerSecret:completion:' to 'loginWithTwitterAccount:consumerKey:consumerSecret:completion:'
+		- renamed 'loginInBackgroundWithAnyAuthName:withParameter:completion:' to 'loginWithAnyAuthName:withParameter:completion:'
+		- renamed 'logoutInBackgroundWithCompletion:' to 'logout:'
+		- renamed 'refreshUserInfoInBackgroundWithCompletion:' to 'refreshUserInfo:'
+		- renamed 'fetchUserUidInBackgroundForEmail:completion:' to 'fetchUserUidForEmail:completion:'
+		- renamed 'fetchUserUidInBackgroundForGoogleEmail:completion:' to 'fetchUserUidForGoogleEmail:completion:'
+		- renamed 'fetchUserUidInBackgroundForFacebookUserId:completion:' to 'fetchUserUidForFacebookUserId:completion:'
+		- renamed 'fetchUserUidInBackgroundForTwitterUserId:completion:' to 'fetchUserUidForTwitterUserId:completion:'
+		- renamed 'activateUserInBackgroundWithUserId:andActivationToken:completion:' to 'activateUserWithUserId:andActivationToken:completion:'
+		- renamed 'deactivateInBackgroundWithCompletion:' to 'deactivateWithCompletion:'
+		- renamed 'forgotPasswordInBackgroundForEmail:completion:' to 'forgotPasswordForEmail:completion:'
+		- renamed 'updateUserInBackgroundWithAuthData:completion:' to 'updateUserWithAuthData:completion:'
+		- renamed 'saveAsDraftInBackgroundWithCompletion:' to 'saveAsDraft:'
+		- renamed 'saveAsDraftEventuallyInBackgroundWithCompletion:' to 'saveAsDraftEventually:'
+		- renamed 'getPresenceOnCompletion:' to 'getPresence:'
+		- renamed 'requestPresenceAccessOnCompletion:' to 'requestPresenceAccess:'
+		- renamed 'requestForPresenceOnCompletion:' to 'requestForPresence:'
+
+	*BuiltQuery:
+		- renamed 'execInBackground:' to 'exec:'
+		- renamed 'includeRefFieldWithKey:' to 'includeReference:'
+		- renamed 'includeRefFieldWithKey:andOnlyRefValuesWithKeys:' to 'includeReference:onlyFields:'
+		- renamed 'includeRefFieldWithKey:excludingRefValuesWithKeys:' to 'includeReference:excludingFields:'
+
+
+	*BuiltUpload:
+		- renamed 'saveInBackgroundWithCompletion:' to 'save:'
+		- renamed 'destroyInBackgroundWithCompletion:' to 'destroy:'
+		- renamed 'fetchInBackgroundWithCompletion:' to 'fetch:'
+		- renamed 'downloadImageInBackgroundWithCompletion:' to 'downloadImage:'
+		- renamed 'downloadDataInBackgroundWithCompletion:' to 'downloadData:'
+
+
+====================================================================================
+
 Version: 2.2.1
 Date: 14-June-2016
 
