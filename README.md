@@ -21,8 +21,8 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
     - Security.framework (iOS|WatchOS)
     - Social.framework (iOS)
     - SystemConfiguration.framework (iOS)
-    - libicucore.dylib (iOS|WatchOS)
-    - libsqlite3.dylib (iOS|WatchOS)
+    - libicucore.tbd (iOS|WatchOS)
+    - libsqlite3.tbd (iOS|WatchOS)
 
 4. In your target app, click on the `Build Settings` tab and add the `-ObjC` flag to `Other Linker Flags`.
 
