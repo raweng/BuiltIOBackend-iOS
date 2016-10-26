@@ -7,7 +7,7 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
 
 1. Download the [Latest iOS SDK release](https://github.com/raweng/BuiltIOBackend-iOS/releases) and extract the zip file to your local disk.
 
-2. Drag and drop BuiltIO.framework and BuiltIO.bundle into your project folder in Xcode.
+2. Drag and drop BuiltIO.framework into your project folder in Xcode.
 
     A window will appear, prompting you to choose one of the options for adding files. Click the ‘Destination’ checkbox to copy items into the destination group’s folder. This will add  the SDK to your project.
 
@@ -18,7 +18,6 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
     - CoreLocation.framework
     - CoreTelephony.framework
     - MobileCoreServices.framework
-    - QuartzCore.framework
     - Security.framework
     - Social.framework
     - SystemConfiguration.framework
@@ -29,10 +28,18 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
 
 ##### **[CocoaPods](https://cocoapods.org)**
 
-Add the following line to your Podfile:
+Add the following line to your Podfile in your desired target:
 ```sh
+target '<iOSTargetName>' do
+platform :ios, '7.0'
 pod 'BuiltIOBackend'
-```
+end
+
+target '<WatchAppTarget>' do
+platform :ios, '7.0'
+pod 'BuiltIOBackend'
+end```
+
 Run `pod install`, and you should now have the latest BuiltIOBackend release.
 
 #### Import Header/Module
