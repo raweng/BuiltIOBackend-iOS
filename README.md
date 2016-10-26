@@ -21,8 +21,8 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
     - Security.framework
     - Social.framework
     - SystemConfiguration.framework
-    - libicucore.dylib
-    - libsqlite3.dylib
+    - libicucore.tbd
+    - libsqlite3.tbd
 
 4. In your target app, click on the `Build Settings` tab and add the `-ObjC` flag to `Other Linker Flags`.
 
@@ -38,7 +38,8 @@ end
 target '<WatchAppTarget>' do
 platform :ios, '7.0'
 pod 'BuiltIOBackend'
-end```
+end
+```
 
 Run `pod install`, and you should now have the latest BuiltIOBackend release.
 
