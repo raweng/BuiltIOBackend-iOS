@@ -32,7 +32,7 @@ s.watchos.vendored_frameworks = 'SDK/watchOS/BuiltIO.framework'
 
 s.watchos.frameworks =  'CoreGraphics','CoreLocation','MobileCoreServices', 'Security'
 
-s.ios.frameworks = 'Accounts','CFNetwork','CoreData','CoreGraphics','CoreLocation','CoreTelephony', 'MobileCoreServices','QuartzCore','Security', 'Social','SystemConfiguration'
+s.ios.frameworks = 'Accounts','CFNetwork','CoreData','CoreGraphics','CoreLocation','CoreTelephony', 'MobileCoreServices','Security', 'Social','SystemConfiguration'
 
 s.libraries = 'icucore', 'sqlite3'
 
