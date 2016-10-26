@@ -12,17 +12,17 @@ The BuiltIO Backend helps you to create iOS apps quickly and effortlessly, takin
     A window will appear, prompting you to choose one of the options for adding files. Click the ‘Destination’ checkbox to copy items into the destination group’s folder. This will add  the SDK to your project.
 
 3. In the project editor, select your app under `TARGETS`. Under the `General` tab, open `Linked Frameworks and Libraries` and add the following libraries:
-    - Accounts.framework
-    - CFNetwork.framework
-    - CoreGraphics.framework
-    - CoreLocation.framework
-    - CoreTelephony.framework
-    - MobileCoreServices.framework
-    - Security.framework
-    - Social.framework
-    - SystemConfiguration.framework
-    - libicucore.tbd
-    - libsqlite3.tbd
+    - Accounts.framework (iOS)
+    - CFNetwork.framework (iOS)
+    - CoreGraphics.framework (iOS|WatchOS)
+    - CoreLocation.framework (iOS|WatchOS)
+    - CoreTelephony.framework (iOS)
+    - MobileCoreServices.framework (iOS|WatchOS)
+    - Security.framework (iOS|WatchOS)
+    - Social.framework (iOS)
+    - SystemConfiguration.framework (iOS)
+    - libicucore.dylib (iOS|WatchOS)
+    - libsqlite3.dylib (iOS|WatchOS)
 
 4. In your target app, click on the `Build Settings` tab and add the `-ObjC` flag to `Other Linker Flags`.
 
