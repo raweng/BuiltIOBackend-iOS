@@ -95,8 +95,6 @@ Helps to check whether its a new or existing object on Built.io Backend.
      } else {
         //old Object
      }
- 
- 
  *
  */
 @property (nonatomic, assign, readonly) BOOL isNew;
@@ -126,8 +124,7 @@ Tags list in Array
      //getting tags
      var tagFileArray:NSArray! = projectObject.tags
  
- 
- */
+*/
 @property (nonatomic, strong) NSArray *tags;
 
 /**
@@ -350,55 +347,55 @@ Issues a timeless update, which means date of creation and updation are not modi
  */
 
 /**
-Assigns a set references to a reference field of an object.
+ Assigns a set references to a reference field of an object.
  
-    //Obj-C
-    BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-    BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
-    BuiltObject *taskObject  = [taskClass object];
-    // setting the project reference
-    [taskObject setReference:@"bltb6202sample73a1" forKey:@"project"];
-
-
-    //Swift
-    var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-    var taskClass:BuiltClass = builtApplication.classWithUID("task")
-    var taskObject:BuiltObject = taskClass.object()
-    // setting the project reference
-    taskObject.setReference("bltb6202sample73a1", forKey:"project")
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
+ BuiltObject *taskObject  = [taskClass object];
+ // setting the project reference
+ [taskObject setReference:@"bltb6202sample73a1" forKey:@"project"];
  
  
-@param reference This can either be a UID of a referenced object as String or array of UIDs of a referenced objects.
-@param key       The uid of the reference field
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var taskClass:BuiltClass = builtApplication.classWithUID("task")
+ var taskObject:BuiltObject = taskClass.object()
+ // setting the project reference
+ taskObject.setReference("bltb6202sample73a1", forKey:"project")
+ 
+ 
+ @param reference This can either be a UID of a referenced object as String or array of UIDs of a referenced objects.
+ @param key       The uid of the reference field
  */
 - (void)setReference:(id)reference forKey:(NSString *)key;
 
 /**
  Assigns a set references to a reference field of an object.
  
-     //Obj-C
-     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-     BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
-     BuiltObject *projectObject  = [projectClass object];
-     projectObject[@"name"] = @"Super Project #41!";
-
-     BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
-     BuiltObject *taskObject  = [taskClass object];
-     // setting the project reference
-     [taskObject setReferenceWithObject:projectObject forKey:@"project"];
-     
-     
-     //Swift
-     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-     var projectClass:BuiltClass = builtApplication.classWithUID("project")
-     var projectObject:BuiltObject = projectClass.object()
-     projectObject["name"] = "Super Project #41!"
-
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+ BuiltObject *projectObject  = [projectClass object];
+ projectObject[@"name"] = @"Super Project #41!";
  
-     var taskClass:BuiltClass = builtApplication.classWithUID("task")
-     var taskObject:BuiltObject = taskClass.object()
-     // setting the project reference
-     taskObject.setReferenceWithObject(projectObject, forKey:"project")
+ BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
+ BuiltObject *taskObject  = [taskClass object];
+ // setting the project reference
+ [taskObject setReferenceWithObject:projectObject forKey:@"project"];
+ 
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var projectClass:BuiltClass = builtApplication.classWithUID("project")
+ var projectObject:BuiltObject = projectClass.object()
+ projectObject["name"] = "Super Project #41!"
+ 
+ 
+ var taskClass:BuiltClass = builtApplication.classWithUID("task")
+ var taskObject:BuiltObject = taskClass.object()
+ // setting the project reference
+ taskObject.setReferenceWithObject(projectObject, forKey:"project")
  
  
  @param reference This can either an instance of BuiltObject or array of BuiltObject instance.
@@ -407,27 +404,26 @@ Assigns a set references to a reference field of an object.
 - (void)setReferenceWithObject:(id)referenceObject forKey:(NSString *)key;
 
 /**
-Fires a query on Built.io Backend and all the objects which pass the query condition are being assigned to the reference field.
+ Fires a query on Built.io Backend and all the objects which pass the query condition are being assigned to the reference field.
  
-    //Obj-C
-    BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-    BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
-    BuiltObject *taskObject  = [taskClass object];
-    [taskObject setReferenceWhere:@{@"name":@"Super Project #41!"} forKey:@"project"];
-
-
-    //Swift
-    var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-    var taskClass:BuiltClass = builtApplication.classWithUID("task")
-    var taskObject:BuiltObject = taskClass.object()
-    taskObject.setReferenceWhere(["name":"Super Project #41!"], forKey:"project")
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
+ BuiltObject *taskObject  = [taskClass object];
+ [taskObject setReferenceWhere:@{@"name":@"Super Project #41!"} forKey:@"project"];
  
  
-@param dictionary Object specifying the conditions
-@param key        The uid of the reference field
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var taskClass:BuiltClass = builtApplication.classWithUID("task")
+ var taskObject:BuiltObject = taskClass.object()
+ taskObject.setReferenceWhere(["name":"Super Project #41!"], forKey:"project")
+ 
+ 
+ @param dictionary Object specifying the conditions
+ @param key        The uid of the reference field
  */
 - (void)setReferenceWhere:(NSDictionary *)dictionary forKey:(NSString *)key;
-
 
 //MARK: - Update/Insert
 /**---------------------------------------------------------------------------------------
@@ -458,27 +454,49 @@ Upserts the object (Updates the matching object if found on Built.io Backend or 
 - (void)upsert:(NSDictionary *)dictionary;
 
 /**
-Use this method only when the values of the fields inside referenced object are to be changed while creating a new object.
+Use this method only when the values of the fields inside referenced object is to be changed while creating a new object.
  
     //Obj-C
     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
     BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
     BuiltObject *taskObject  = [taskClass object];
     [taskObject addUpsertForReferenceField:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}]
-
+
     //Swift
     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
     var taskClass:BuiltClass = builtApplication.classWithUID("task")
     var taskObject:BuiltObject = taskClass.object()
-    taskObject.addUpsertForReferenceField("project", condition:["name":"Super Project #41!"], replaceWith:["description":"This is a very cool project"])
+    taskObject.addUpsertForReferenceField("project", condition:["name":"Super Project #41!"], replaceWith:@{"description":"This is a very cool project"})
  
  
 @param referenceField  Reference uid on which UPSERT is to be performed
 @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
 @param replaceDictionary  New key value pairs for the fields inside the referenced object
  */
+
 - (void)addUpsertForReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
+/**
+ Use this method only when the values of the fields inside referenced objects are to be changed while creating a new objects.
+ 
+     //Obj-C
+     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+     BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
+     BuiltObject *taskObject  = [taskClass object];
+     [taskObject addUpsertForMultipleReferenceField:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}];
+ 
+     //Swift
+     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+     var taskClass:BuiltClass = builtApplication.classWithUID("task")
+     var taskObject:BuiltObject = taskClass.object()
+     taskObject.addUpsertForMultipleReferenceField("project", condition:["name":"Super Project #41!"], replaceWith:["description":"This is a very cool project"])
+ 
+ 
+ @param referenceField  Reference uid on which UPSERT is to be performed
+ @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
+ @param replaceDictionary  New key value pairs for the fields inside the referenced object
+ */
+- (void)addUpsertForMultipleReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 //MARK: - object owner
 /**---------------------------------------------------------------------------------------
@@ -644,7 +662,6 @@ For the given field, it deletes the first matched value.(Applies only to fields 
  */
 - (void)pullValue:(id)value forKey:(NSString *)key;
 
-
 /**
 A value in a field that allows multiple values
  
@@ -674,7 +691,6 @@ A value in a field that allows multiple values
  *  @param key    key to assign on.
  */
 - (void)setObject:(id)object forKey:(NSString *)key;
-
 
 //MARK: - set Groups
 
@@ -874,8 +890,7 @@ Saves an object as draft asyncronously so that it is not visible unless explicit
      
      }
  
- 
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)saveAsDraft:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -903,7 +918,7 @@ Saves an BuiltObject asyncronously to Built.io Backend servers
      }
  
  
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)save:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -930,7 +945,7 @@ Saves an object as draft asyncronously so that it is not visible unless explicit
      
      }
  
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)saveAsDraftEventually:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -958,7 +973,7 @@ Saves an BuiltObject asyncronously if network is unavailable. Resumes when netwo
      }
  
  
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)saveEventually:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -990,7 +1005,7 @@ Deletes the BuiltObject asyncronously with specified object UID.
      
      }
  
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)destroy:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -1016,7 +1031,7 @@ Deletes the BuiltObject asyncronously with specified object UID. Drafts the oper
      }
  
  
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+@param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
  */
 - (void)destroyEventually:(BuiltRequestCompletionHandler)completionBlock;
 

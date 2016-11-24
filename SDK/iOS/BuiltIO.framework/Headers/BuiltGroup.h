@@ -164,7 +164,6 @@ Removes GroupMultiple to this object
  */
 - (void)removeGroupMultiple:(BuiltGroupMultiple*)group;
 
-
 //MARK: - set values for reference fields
 
 /**---------------------------------------------------------------------------------------
@@ -173,73 +172,73 @@ Removes GroupMultiple to this object
  */
 
 /**
-Assigns a set references to a reference field of an object.
+ Assigns a set references to a reference field of an object.
  
-     //Obj-C
-     BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
-     // setting the project reference
-     [detailGroup setReference:@"bltb6202sample73a1" forKey:@"project"];
-     
-     //Swift
-     var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
-     // setting the project reference
-     detailGroup.setReference("bltb6202sample73a1", forKey:"project")
-
-
-@param reference This can either be a UID of a referenced object or array of UIDs of a referenced objects.
-@param key       The uid of the reference field
+ //Obj-C
+ BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
+ // setting the project reference
+ [detailGroup setReference:@"bltb6202sample73a1" forKey:@"project"];
+ 
+ //Swift
+ var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
+ // setting the project reference
+ detailGroup.setReference("bltb6202sample73a1", forKey:"project")
+ 
+ 
+ @param reference This can either be a UID of a referenced object or array of UIDs of a referenced objects.
+ @param key       The uid of the reference field
  */
 - (void)setReference:(id)reference forKey:(NSString *)key;
 
 /**
-Fires a query on Built.io Backend and all the objects which pass the query condition are being assigned to the reference field.
-
-     //Obj-C
-     BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
-     // setting the project reference
-     [detailGroup setReferenceWhere:@{@"name":@"Super Project #41!"} forKey:@"project"];
+ Fires a query on Built.io Backend and all the objects which pass the query condition are being assigned to the reference field.
  
-     //Swift
-     var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
-     // setting the project reference
-     detailGroup.setReferenceWhere(["name":"Super Project #41!"], forKey:"project")
+ //Obj-C
+ BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
+ // setting the project reference
+ [detailGroup setReferenceWhere:@{@"name":@"Super Project #41!"} forKey:@"project"];
  
-@param dictionary Object specifying the conditions
-@param key        The uid of the reference field
+ //Swift
+ var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
+ // setting the project reference
+ detailGroup.setReferenceWhere(["name":"Super Project #41!"], forKey:"project")
+ 
+ @param dictionary Object specifying the conditions
+ @param key        The uid of the reference field
  */
 - (void)setReferenceWhere:(NSDictionary *)dictionary forKey:(NSString *)key;
 
 /**
-Assigns a set references to a reference field of an object.
+ Assigns a set references to a reference field of an object.
  
-     //Obj-C
-     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-     BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
-     BuiltObject *projectObject  = [projectClass object];
-     projectObject[@"name"] = @"Super Project #41!";
-     
-     BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
-     // setting the project reference
-     [detailGroup setReferenceWithObject:projectObject forKey:@"project"];
-     
-     
-     //Swift
-     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-     var projectClass:BuiltClass = builtApplication.classWithUID("project")
-     var projectObject:BuiltObject = projectClass.object()
-     projectObject["name"] = "Super Project #41!"
-     
-     var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
-     // setting the project reference
-     detailGroup.setReferenceWithObject(projectObject, forKey:"project")
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+ BuiltObject *projectObject  = [projectClass object];
+ projectObject[@"name"] = @"Super Project #41!";
  
-@param referenceObject This can either an instance of BuiltObject or array of BuiltObject instance.
-@param key             The uid of the reference field
+ BuiltGroup *detailGroup  = [BuiltGroup groupWithFieldName:@"details"];
+ // setting the project reference
+ [detailGroup setReferenceWithObject:projectObject forKey:@"project"];
+ 
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var projectClass:BuiltClass = builtApplication.classWithUID("project")
+ var projectObject:BuiltObject = projectClass.object()
+ projectObject["name"] = "Super Project #41!"
+ 
+ var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
+ // setting the project reference
+ detailGroup.setReferenceWithObject(projectObject, forKey:"project")
+ 
+ @param referenceObject This can either an instance of BuiltObject or array of BuiltObject instance.
+ @param key             The uid of the reference field
  */
 - (void)setReferenceWithObject:(id)referenceObject forKey:(NSString *)key;
 
 /**
-Use this method only when the values of the fields inside referenced object are to be changed while creating a new object.
+Use this method only when the values of the fields inside referenced object is to be changed while creating a new object.
  
      //ObjC
      BuiltGroup *detailGroup = [BuiltGroup groupWithFieldName:@"details"];
@@ -256,7 +255,29 @@ Use this method only when the values of the fields inside referenced object are 
 @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
 @param replaceDictionary   New key value pairs for the fields inside the referenced object
  */
+
 - (void)addUpsertForReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
+
+/**
+ Use this method only when the values of the fields inside referenced objects are to be changed while creating a new object.
+ 
+     //ObjC
+     BuiltGroup *detailGroup = [BuiltGroup groupWithFieldName:@"details"];
+ 
+     [detailGroup addUpsertForMultipleReferenceField:@"project" condition:@{@"name":@"Super Project #41"} replaceWith:@{@"name":@"Super Project A", @"description":@"New project"}];
+ 
+     //Swift
+     var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
+ 
+     detailGroup.addUpsertForMultipleReferenceField("project", condition:["name":"Super Project #41"], replaceWith:["name":"Super Project A", "description":"New project"])
+ 
+ 
+ @param referenceField      Reference uid on which UPSERT is to be performed
+ @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
+ @param replaceDictionary   New key value pairs for the fields inside the referenced object
+ */
+
+- (void)addUpsertForMultipleReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 
 //MARK: - operations on fields of multiple type

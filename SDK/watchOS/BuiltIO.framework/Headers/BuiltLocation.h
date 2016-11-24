@@ -93,8 +93,7 @@ Gets the current location and returns as in `BuiltLocation` object.
          var longitude:Double = BuiltLocation.longitude
      }
  
-@param successBlock will have the `BuiltLocation` object with current longitude and latitude.
-@param errorBlock will have an `NSError` object in case the current location was not available.
+@param completionBlock Completion block with params current location and error object in any.
  */
 + (void)currentLocationOnCompletion:(void (^) (BuiltLocation * BUILT_NULLABLE_P currentLocation, NSError * BUILT_NULLABLE_P error))completionBlock;
 

@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 raweng. All rights reserved.
 //
 
-//  sdk-version: 3.0.0
-//  api-version: 3.0
+//  sdk-version: 3.1.0
+//  api-version: 3.1
 
 #import <Foundation/Foundation.h>
 
@@ -28,6 +28,7 @@ FOUNDATION_EXPORT const unsigned char Built_IOVersionString[];
 #import <BuiltIO/BuiltLocation.h>
 #import <BuiltIO/BuiltRole.h>
 #import <BuiltIO/BuiltUser.h>
+#import <BuiltIO/BuiltUserRoleMapper.h>
 #import <BuiltIO/BuiltUpload.h>
 #import <BuiltIO/BuiltACL.h>
 #import <BuiltIO/BuiltObject.h>

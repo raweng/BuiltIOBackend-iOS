@@ -21,6 +21,8 @@
 @class BuiltQuery;
 @class BuiltACL;
 @class BuiltKeyStore;
+@class BuiltUserRoleMapper;
+
 
 BUILT_ASSUME_NONNULL_BEGIN
 /**
@@ -447,6 +449,49 @@ Class for updating installation and for subscribing/unsubscribing for push notif
 #endif
 
 /**---------------------------------------------------------------------------------------
+ * @name BuiltUserRoleMapper Instance
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Represents a new role mapper to create on Built.io Backend.
+ 
+     //'blt5d4sample2633b' is a dummy Application API key
+ 
+     //Obj-C
+     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+     BuiltUserRoleMapper *mapperObject = [builtApplication userRoleMapper];
+ 
+     //Swift
+     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+     var mapperObject:BuiltUserRoleMapper = builtApplication.userRoleMapper()
+ 
+ 
+ @return Returns an instance of BuiltUserRoleMapper.
+ */
+
+- (BuiltUserRoleMapper *)userRoleMapper;
+
+/**
+ Represents a role mapper on Built.io Backend
+ 
+     //'blt5d4sample2633b' is a dummy Application API key
+     //'blt9a1sample5584k' is a dummy mapperUID
+ 
+     //Obj-C
+     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+     BuiltUserRoleMapper *mapperObject = [builtApplication userRoleMapperWithUID:@"blt9a1sample5564k"];
+ 
+     //Swift
+     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+     var mapperObject:BuiltUserRoleMapper = builtApplication.userRoleMapperWithUID("blt9a1sample5584k")
+ 
+ @param mapperUID uid of BuiltUserRoleMapper.
+ @return Returns an instance of BuiltUserRoleMapper.
+ */
+- (BuiltUserRoleMapper *)userRoleMapperWithUID:(NSString*)mapperUID;
+
+/**---------------------------------------------------------------------------------------
  * @name BuiltRole Instance
  *  ---------------------------------------------------------------------------------------
  */
@@ -686,10 +731,7 @@ Asynchronously fetches the application info.
      
      }
  
- 
-@param successBlock invoked when request processed sucessfully.
-@param errorBlock   invoked when request process fails. error parameter contains the error info.
-@param finallyBlock invoked when request is finished. Will get invoked after sucess or failure.
+ @param completionBlock Completion block with params responseType (cache or network), dictionary of application information and error object in any.
  */
 - (void)fetchApplicationInfo:(void (^)(BuiltResponseType responseType, NSDictionary * BUILT_NULLABLE_P info, NSError * BUILT_NULLABLE_P error))completionBlock;
 

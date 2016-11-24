@@ -212,6 +212,33 @@ BUILT_ASSUME_NONNULL_BEGIN
  */
 - (void)addUsers:(NSArray*)userArray;
 
+/**
+ @abstract Adds users through query in given role.
+ 
+    //'blt5d4sample2633b' is a dummy Application API key
+ 
+    //Obj-C
+    BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+    BuiltRole *role = [builtApplication roleWithName:@"Manager"];
+    BuiltQuery *query = [builtApplication userQuery];
+    [query whereKey:@"email" matchesRegex:@".john" modifiers:@"i"];
+    [role setUsersWithQuery:query];
+ 
+    //Swift
+    var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+    var role:BuiltRole = builtApplication.roleWithName("Manager")
+    var query:BuiltQuery = builtApplication.userQuery()
+    query.whereKey("email", matchesRegex: ".john", modifiers: "i")
+    role.setUsersWithQuery(query)
+ 
+@param query BuiltQuery contains condition to select group of users to assign for current role.
+ 
+    @note BuiltQuery object must be created from 'built_io_application_user' class,
+ which we can create using method 'userQuery' from BuiltApplication class.
+
+ */
+-(void)setUsersWithQuery:(BUILT_NONNULL BuiltQuery *)query;
+
 /**---------------------------------------------------------------------------------------
  * @name Remove Users
  *  ---------------------------------------------------------------------------------------
@@ -283,7 +310,6 @@ BUILT_ASSUME_NONNULL_BEGIN
  @param roleUid uid of the role that has to be added to this role.
  */
 - (void)addRole:(NSString *)roleUid;
-
 
 /**
 @abstract Adds role's to this role.

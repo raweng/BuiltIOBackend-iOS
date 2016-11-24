@@ -11,6 +11,7 @@
 
 @class BuiltObject;
 @class BuiltQuery;
+@class BuiltUserRoleMapper;
 
 BUILT_ASSUME_NONNULL_BEGIN
 /**

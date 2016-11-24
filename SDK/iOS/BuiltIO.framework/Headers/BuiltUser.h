@@ -170,6 +170,21 @@ BUILT_ASSUME_NONNULL_BEGIN
  */
 @property (nullable, nonatomic, copy) NSString *oldPassword;
 
+/**
+ @abstract the last login of BuiltUser
+ 
+ //Obj-C
+ NSString *lastLogin = userObject.lastLoginAt;
+ 
+ //Swift
+ var lastLogin:String = userObject.lastLoginAt
+ 
+ 
+ @discussion the last login time of given BuiltUser
+ */
+@property (nullable, nonatomic, copy, readonly) NSDate *lastLoginAt;
+
+
 //MARK: - Access tokens
 
 #if !TARGET_OS_WATCH
@@ -297,10 +312,10 @@ Checks whether the user is currently logged in.
      
      }
  
- 
  @discussion Register's new user. Make sure that password and email are set. This will also enforce that the email isn't already taken.
- @param successBlock callback in case of success.
- @param errorBlock callback in case of failure.
+ 
+ @param completionBlock Completion block with params responseType (cache or network) and error object in any.
+
  */
 - (void)registerUser:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -685,10 +700,10 @@ Updates the existing user asynchronously
  */
 - (void)updateUserWithAuthData:(NSDictionary *)auth completion:(BuiltRequestCompletionHandler)completionBlock;
 
-
 - (void)saveAsDraft:(BuiltRequestCompletionHandler)completionBlock BUILTIO_DEPRECATED("Not for BuiltUser");
 
 - (void)saveAsDraftEventually:(BuiltRequestCompletionHandler)completionBlock BUILTIO_DEPRECATED("Not for BuiltUser");
+
 
 @end
 

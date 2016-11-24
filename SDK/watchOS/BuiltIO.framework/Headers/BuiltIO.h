@@ -29,6 +29,7 @@ FOUNDATION_EXPORT const unsigned char BuiltIO_watchOSVersionString[];
 #import <BuiltIO/BuiltLocation.h>
 #import <BuiltIO/BuiltRole.h>
 #import <BuiltIO/BuiltUser.h>
+#import <BuiltIO/BuiltUserRoleMapper.h>
 #import <BuiltIO/BuiltUpload.h>
 #import <BuiltIO/BuiltACL.h>
 #import <BuiltIO/BuiltObject.h>

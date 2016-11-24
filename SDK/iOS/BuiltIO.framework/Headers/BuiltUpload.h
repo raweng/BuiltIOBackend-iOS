@@ -361,12 +361,7 @@ Accepts NSDictionary insance as parameter to configure upload object.
      uploadObject.save { (responseType, error) -> Void in
  
      }
-
- @param successBlock callback when the file is successfully uploaded.
- @param errorBlock CallBack in case of failure.
- @param finalBlock finalBlock to be always executed eventually.
-
- }
+ @param completionBlock Completion block with params responseType (cache or network) and error object in any.
  
  */
 - (void)save:(BuiltRequestCompletionHandler)completionBlock;
@@ -391,7 +386,7 @@ Accepts NSDictionary insance as parameter to configure upload object.
      
      }
  
- @param completionBlock callBack in case of success/error.
+ @param completionBlock Completion block with params responseType (cache or network) and error object in any.
  */
 - (void)destroy:(BuiltRequestCompletionHandler)completionBlock;
 
@@ -415,9 +410,8 @@ Accepts NSDictionary insance as parameter to configure upload object.
      
      }
 
- @param successBlock CallBack in case of success.
- @param errorBlock CallBack in case of failure.
- @param finalBlock finalBlock to be always executed eventually.
+ @param completionBlock Completion block with params responseType (cache or network) and error object in any.
+
 
  */
 - (void)fetch:(BuiltRequestCompletionHandler)completionBlock;
@@ -442,8 +436,8 @@ Accepts NSDictionary insance as parameter to configure upload object.
      
      }
  
- @param successBlock on successful download, the success block contains the UIImage object.
- @param errorBlock in case of errors, this block is called.
+ @param completionBlock Completion block with params responseType (cache or network), image and error object in any.
+
  */
 //#if TARGET_OS_IPHONE
 - (void)downloadImage:(void (^)(BuiltResponseType responseType, UIImage * BUILT_NULLABLE_P image, NSError * BUILT_NULLABLE_P error))completionBlock;

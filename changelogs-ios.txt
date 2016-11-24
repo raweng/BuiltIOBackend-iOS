@@ -1,4 +1,52 @@
 
+Version: 3.1.0
+Date: 24-Nov-2016
+
+New Features:
+
+	*BuiltUserRoleMapper:
+		- New class introduced.
+	
+	*BuiltRole:
+		- Added method ‘setUsersWithQuery:’
+
+	*BuiltUser:
+		- Added property ‘lastLoginAt’
+
+	*BuiltApplication:
+		- Added method 'userRoleMapper'
+		- Added method 'userRoleMapperWithUID:'
+
+	*BuiltObject:
+		- Added method 'addUpsertForMultipleReferenceField:condition:replaceWith:'
+
+	*BuiltGroup:
+		- Added method 'addUpsertForMultipleReferenceField:condition:replaceWith:'
+
+Modifications:
+
+	*BuiltObject:
+		- Method 'addUpsertForReferenceField:condition:replaceWith:’ removed support for multiple field uid 
+
+	*BuiltGroup:
+		- Method 'addUpsertForReferenceField:condition:replaceWith:’ removed support for multiple field uid
+
+API deprecation:
+
+	*BuiltPresence:
+		- Removed property 'requests'	
+		- Removed property 'isPublic'	
+		- Removed property 'statusMessage'	
+		- Removed method 'whitelistUsers'	
+		- Removed method 'acceptRequests'	
+		- Removed method 'addUserInWhiteList:’	
+		- Removed method 'addUserUidInWhiteList:’	
+		- Removed method 'removeUserFromWhiteList:’	
+		- Removed method 'removeUserUidFromWhiteList:’	
+
+
+====================================================================================
+
 Version: 3.0.0
 Date: 26-Oct-2016
 
