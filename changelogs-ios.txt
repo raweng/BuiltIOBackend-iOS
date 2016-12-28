@@ -1,6 +1,28 @@
+Version: 3.1.1
+Date: 2-Dec-2016
+
+Modifications:
+
+	*BuiltObject:
+		- renamed 'addUpsertForReferenceField:condition:replaceWith:’ to 'addUpsertForReference:condition:replaceWith:’
+
+	*BuiltGroup:
+		- renamed 'addUpsertFormultipleReferenceField:condition:replaceWith:’ to 'addUpsertForReferences:condition:replaceWith:’
+
+
+API deprecation:
+
+	*BuiltUser:
+		- Removed method 'requestPresenceAccess:'	
+
+
+====================================================================================
 
 Version: 3.1.0
 Date: 24-Nov-2016
+
+NOTE: 
+	- Deprecated methods from all class is been removed.
 
 New Features:
 

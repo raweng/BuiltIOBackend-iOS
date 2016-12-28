@@ -243,20 +243,20 @@ Use this method only when the values of the fields inside referenced object is t
      //ObjC
      BuiltGroup *detailGroup = [BuiltGroup groupWithFieldName:@"details"];
  
-     [detailGroup addUpsertForReferenceField:@"project" condition:@{@"name":@"Super Project #41"} replaceWith:@{@"name":@"Super Project A", @"description":@"New project"}];
+     [detailGroup addUpsertForReference:@"project" condition:@{@"name":@"Super Project #41"} replaceWith:@{@"name":@"Super Project A", @"description":@"New project"}];
  
      //Swift
      var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
  
-     detailGroup.addUpsertForReferenceField("project", condition:["name":"Super Project #41"], replaceWith:["name":"Super Project A", "description":"New project"])
+     detailGroup.addUpsertForReference("project", condition:["name":"Super Project #41"], replaceWith:["name":"Super Project A", "description":"New project"])
  
  
-@param referenceField      Reference uid on which UPSERT is to be performed
+@param referenceField      Reference field uid on which UPSERT has to be performed
 @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
 @param replaceDictionary   New key value pairs for the fields inside the referenced object
  */
 
-- (void)addUpsertForReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
+- (void)addUpsertForReference:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 /**
  Use this method only when the values of the fields inside referenced objects are to be changed while creating a new object.
@@ -264,20 +264,20 @@ Use this method only when the values of the fields inside referenced object is t
      //ObjC
      BuiltGroup *detailGroup = [BuiltGroup groupWithFieldName:@"details"];
  
-     [detailGroup addUpsertForMultipleReferenceField:@"project" condition:@{@"name":@"Super Project #41"} replaceWith:@{@"name":@"Super Project A", @"description":@"New project"}];
+     [detailGroup addUpsertForReferences:@"project" condition:@{@"name":@"Super Project #41"} replaceWith:@{@"name":@"Super Project A", @"description":@"New project"}];
  
      //Swift
      var detailGroup:BuiltGroup = BuiltGroup(fieldName:"details")
  
-     detailGroup.addUpsertForMultipleReferenceField("project", condition:["name":"Super Project #41"], replaceWith:["name":"Super Project A", "description":"New project"])
+     detailGroup.addUpsertForReferences("project", condition:["name":"Super Project #41"], replaceWith:["name":"Super Project A", "description":"New project"])
  
  
- @param referenceField      Reference uid on which UPSERT is to be performed
+ @param referenceField      Reference field uid (Which is marked as multiple) on which UPSERT has to be performed
  @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
  @param replaceDictionary   New key value pairs for the fields inside the referenced object
  */
 
-- (void)addUpsertForMultipleReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
+- (void)addUpsertForReferences:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 
 //MARK: - operations on fields of multiple type

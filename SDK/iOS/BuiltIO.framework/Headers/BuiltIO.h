@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 raweng. All rights reserved.
 //
 
-//  sdk-version: 3.1.0
+//  sdk-version: 3.1.1
 //  api-version: 3.1
 
 #import <Foundation/Foundation.h>

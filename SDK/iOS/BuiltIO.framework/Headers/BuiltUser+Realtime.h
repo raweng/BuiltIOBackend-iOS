@@ -158,39 +158,6 @@ Fetch presence of user by initating network call.
  */
 - (void)getPresence:(void (^) (NSError * BUILT_NULLABLE_P error))completionBlock;
 
-/**
-Request for user's presence
-
-     // 'blt5d4sample2633b' is dummy Application API key
-     // 'blt5dsamplef62a111a' is dummy object uid of an application user to whom we want to send a request
-     
-     //ObjC
-     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-     BuiltUser *userObject = [builtApplication userWithUID:@"blt5dsamplef62a111a"];
-     [userObject requestPresenceAccess:^(NSError *error) {
-         if (error) {
-            //error occured while requesting for presence
-         }else {
-            //requested for presence
-         }
-     }];
-     
-     //Swift
-     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-     var userObject:BuiltUser = builtApplication.userWithUID("blt5dsamplef62a111a")
-     userObject.requestPresenceAccess { (error) -> Void in
-         if (error != nil) {
-            //error occured while requesting for presence
-         }else {
-            //requested for presence
-         }
-     }
- 
-@param completionBlock block called once request is performed
-@warning Not supported in watchOS
- */
-- (void)requestPresenceAccess:(void (^) (NSError * BUILT_NULLABLE_P error))completionBlock;
-
 @end
 
 BUILT_ASSUME_NONNULL_END

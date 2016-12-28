@@ -460,21 +460,21 @@ Use this method only when the values of the fields inside referenced object is t
     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
     BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
     BuiltObject *taskObject  = [taskClass object];
-    [taskObject addUpsertForReferenceField:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}]
+    [taskObject addUpsertForReference:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}]
 
     //Swift
     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
     var taskClass:BuiltClass = builtApplication.classWithUID("task")
     var taskObject:BuiltObject = taskClass.object()
-    taskObject.addUpsertForReferenceField("project", condition:["name":"Super Project #41!"], replaceWith:@{"description":"This is a very cool project"})
+    taskObject.addUpsertForReference("project", condition:["name":"Super Project #41!"], replaceWith:@{"description":"This is a very cool project"})
  
  
-@param referenceField  Reference uid on which UPSERT is to be performed
+@param referenceField  Reference field uid on which UPSERT has to be performed
 @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
 @param replaceDictionary  New key value pairs for the fields inside the referenced object
  */
 
-- (void)addUpsertForReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
+- (void)addUpsertForReference:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 /**
  Use this method only when the values of the fields inside referenced objects are to be changed while creating a new objects.
@@ -483,20 +483,20 @@ Use this method only when the values of the fields inside referenced object is t
      BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
      BuiltClass *taskClass = [builtApplication classWithUID:@"task"];
      BuiltObject *taskObject  = [taskClass object];
-     [taskObject addUpsertForMultipleReferenceField:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}];
+     [taskObject addUpsertForReferences:@"project" condition:@{@"name":@"Super Project #41!"} replaceWith:@{@"description":@"This is a very cool project"}];
  
      //Swift
      var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
      var taskClass:BuiltClass = builtApplication.classWithUID("task")
      var taskObject:BuiltObject = taskClass.object()
-     taskObject.addUpsertForMultipleReferenceField("project", condition:["name":"Super Project #41!"], replaceWith:["description":"This is a very cool project"])
+     taskObject.addUpsertForReferences("project", condition:["name":"Super Project #41!"], replaceWith:["description":"This is a very cool project"])
  
  
- @param referenceField  Reference uid on which UPSERT is to be performed
+ @param referenceField   Reference field uid (Which is marked as multiple) on which UPSERT has to be performed
  @param conditionDictionary A check will be performed, whether any object has the key value pair(s) supplied in the dictionary in the reference field
  @param replaceDictionary  New key value pairs for the fields inside the referenced object
  */
-- (void)addUpsertForMultipleReferenceField:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
+- (void)addUpsertForReferences:(NSString *)referenceField condition:(NSDictionary *)conditionDictionary replaceWith:(NSDictionary *)replaceDictionary;
 
 //MARK: - object owner
 /**---------------------------------------------------------------------------------------
