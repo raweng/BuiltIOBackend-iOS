@@ -145,8 +145,9 @@ Add GroupMultiple to this object
 
 
 @param group Instance of BuiltGroupMultiple for this object
+@warning This method has been deprecated.
  */
-- (void)addGroupMultiple:(BuiltGroupMultiple*)group;
+- (void)addGroupMultiple:(BuiltGroupMultiple*)group BUILTIO_DEPRECATED("addGroupMultiple: is been deprecated.");
 
 /**
 Removes GroupMultiple to this object
@@ -161,8 +162,9 @@ Removes GroupMultiple to this object
      detailGroup.removeGroupMultiple(stepsGroup)
 
 @param group Instance of BuiltGroupMultiple for this object
+@warning This method has been deprecated.
  */
-- (void)removeGroupMultiple:(BuiltGroupMultiple*)group;
+- (void)removeGroupMultiple:(BuiltGroupMultiple*)group BUILTIO_DEPRECATED("removeGroupMultiple: is been deprecated.");
 
 //MARK: - set values for reference fields
 
@@ -368,8 +370,10 @@ Use this method only when the values of the fields inside referenced object is t
  
  @param key Key containing the value of BuiltGroupMultiple
  @return Instance of BuiltGroupMultiple
+ @warning This method has been deprecated.
+
  */
-- (BuiltGroupMultiple*)groupMultipleForKey:(NSString*)key;
+- (BuiltGroupMultiple*)groupMultipleForKey:(NSString*)key BUILTIO_DEPRECATED("groupMultipleForKey: is been deprecated.");
 
 /**---------------------------------------------------------------------------------------
  * @name Configure

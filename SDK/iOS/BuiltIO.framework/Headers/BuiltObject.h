@@ -764,8 +764,9 @@ Adds GroupMultiple to this object
       bugObject.addGroupMultiple(stepsGroup)
 
 @param groupMultiple Instance of BuiltGroupMultiple for this object
+@warning This method has been deprecated.
  */
--(void)addGroupMultiple:(BuiltGroupMultiple*)groupMultiple;
+-(void)addGroupMultiple:(BuiltGroupMultiple*)groupMultiple BUILTIO_DEPRECATED("addGroupMultiple: is been deprecated.");
 
 /**
 Get the info of the specified key of BuiltGroup object and returns instance of BuiltGroup.
@@ -797,8 +798,9 @@ Get the info of the specified key of BuiltGroupMultiple object and returns insta
  
 @param key Key containing the value of BuiltGroupMultiple
 @return Instance of BuiltGroupMultiple
+@warning This method has been deprecated.
  */
--(nullable BuiltGroupMultiple*)groupMultipleForKey:(NSString*)key;
+-(nullable BuiltGroupMultiple*)groupMultipleForKey:(NSString*)key BUILTIO_DEPRECATED("groupMultipleForKey: is been deprecated.");
 
 
 //MARK: - Object fetch

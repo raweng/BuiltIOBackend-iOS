@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name             = 'BuiltIOBackend'
-s.version          = '3.1.1'
+s.version          = '3.1.2'
 s.summary          = 'The BuiltIO Backend helps you to create apps quickly and effortlessly, taking care of all the backend requirements.'
 
 s.description      = <<-DESC

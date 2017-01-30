@@ -11,9 +11,11 @@
 
 @class BuiltObject;
 @class BuiltGroup;
-
+NS_CLASS_DEPRECATED(10,10_6,4_0,5_0)
 BUILT_ASSUME_NONNULL_BEGIN
 /**
+ @note This class has been deprecated.
+ 
  A Group is special type of field in Built.io Backend. The reason its named such is that its a set of fields grouped together. Each group field has its own schema and can contain sub-groups. GroupMultiple should be used when a group field is marked as 'multiple'.
  */
 
@@ -32,6 +34,7 @@ BUILT_ASSUME_NONNULL_BEGIN
  *  @param fieldName UID of the group field in your class schema
  *
  *  @return new BuiltGroupMultiple instance
+ *  @warning This method has been deprecated.
  */
 + (instancetype) groupMultipleWithFieldName:(NSString*)fieldName;
 
@@ -44,6 +47,7 @@ BUILT_ASSUME_NONNULL_BEGIN
  *  Add Group to this object
  *
  *  @param group Instance of BuiltGroup for this object
+ *  @warning This method has been deprecated.
  */
 - (void)addGroup:(BuiltGroup*)group;
 
@@ -51,6 +55,7 @@ BUILT_ASSUME_NONNULL_BEGIN
  *  Removes Group to this object
  *
  *  @param group Instance of BuiltGroup to remove from this object
+ *  @warning This method has been deprecated.
  */
 - (void)removeGroup:(BuiltGroup*)group;
 
@@ -63,6 +68,7 @@ BUILT_ASSUME_NONNULL_BEGIN
  *  This should be used to mix array containing instances of BuiltGroup or BuiltGroupMultiple together.
  *
  *  @param groupsArray Array containing instance of BuiltGroup or BuiltGroupMultiple
+ *  @warning This method has been deprecated.
  */
 - (void)addByMixinGroups:(NSArray*)groupsArray;
 
@@ -82,6 +88,7 @@ BUILT_ASSUME_NONNULL_BEGIN
  
  
  @param dictionary User Info
+ @warning This method has been deprecated.
  */
 - (void)configureWithArray:(NSArray*)array;
 
@@ -95,6 +102,7 @@ Get BuiltGroup object of the specified index.
 
 @param index index of which BuiltGroup need to get.
 @return BuiltGroup instance with data of specified index.
+@warning This method has been deprecated.
  */
 - (BuiltGroup*)groupAtIndex:(NSInteger)index;
 
