@@ -1,9 +1,20 @@
+Version: 3.1.3
+Date: 9-Feb-2017
+
+	NOTE: BuiltGroupMultiple class has been deprecated and will be removed in future release.
+
+Bug Fixes:
+
+	- Fix issue while attempting to reconnect the server when realtime mode is enabled.
+
+=====================================================================================
+
 Version: 3.1.2
-Date: 30-Jan-2017
+Date: 9-Jan-2017
 
-API Deprecation:
+API deprecation:
 
-	NOTE: GroupMultiple has been deprecated. Please read the following blog post to understand it better https://goo.gl/6Swaq4
+	NOTE: BuiltGroupMultiple class has been deprecated and will be removed in future release.
 
 	*BuiltGroupMultiple:
 		This class has been deprecated.
@@ -31,7 +42,7 @@ Modifications:
 		- renamed 'addUpsertFormultipleReferenceField:condition:replaceWith:’ to 'addUpsertForReferences:condition:replaceWith:’
 
 
-API Deprecation:
+API deprecation:
 
 	*BuiltUser:
 		- Removed method 'requestPresenceAccess:'	
@@ -74,7 +85,7 @@ Modifications:
 	*BuiltGroup:
 		- Method 'addUpsertForReferenceField:condition:replaceWith:’ removed support for multiple field uid
 
-API Deprecation:
+API deprecation:
 
 	*BuiltPresence:
 		- Removed property 'requests'	
@@ -172,7 +183,7 @@ Modifications:
 Version: 2.2.1
 Date: 14-June-2016
 
-API Deprecation:
+API deprecation:
 
 	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
 	
@@ -227,7 +238,7 @@ Modifications:
 	*QueryResult
 		- method 'count' will return count of objects or total objects count as per the BuiltQuery.
 
-API Deprecation:
+API deprecation:
 
 	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
 	
@@ -288,7 +299,7 @@ Bug Fixes:
 	*BuiltACL
 		- fix issue causing multiple permission for Others and Anonymous doesnt work as aspected.
 
-API Deprecation:
+API deprecation:
 
 	*BuiltQuery:
 		- Deprecated method 'includeKey:andValue:'
@@ -373,7 +384,7 @@ Bug Fixes:
 	*BuiltQuery:	
 		- fix issue causing Query to not return any error when there is no active internet connection.
 
-API Deprecation:
+API deprecation:
 	*BuiltObject:
 		- Deprecated method 'upsert:forReferenceField:newDictionary'
 
