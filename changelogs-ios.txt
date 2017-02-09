@@ -5,7 +5,7 @@ Date: 9-Feb-2017
 
 Bug Fixes:
 
-	- Fix issue while attempting to reconnect the server when realtime mode is enabled.
+	- Realtime issue fix while attempting to reconnect the server.
 
 =====================================================================================
 
