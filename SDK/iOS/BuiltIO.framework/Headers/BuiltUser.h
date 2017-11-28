@@ -348,7 +348,30 @@ Login BuiltUser asynchronously by providing email as ID and signup password
                        andPassword:(NSString *)password
                         completion:(BuiltRequestCompletionHandler)completionBlock;
 
+/**
+ Login BuiltUser asynchronously by providing username as ID and signup password
+     
+    //Obj-C
+     BuiltUser *userObject = [builtApplication user];
+     [userObject loginWithUsername:@"johncena" andPassword:@"password" completion:^(BuiltResponseType responseType, NSError *error) {
+     
+     }];
+     
+     //Swift
+     var userObject:BuiltUser = builtApplication.user()
+     userObject.loginWithUsername("johncena", andPassword:"password") { (responseType, error!) -> Void in
+     
+     }
+     
+@param username        username that you used to signup.
+@param password        Your signup password.
+@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+*/
+- (void)loginWithUsername:(NSString *)username
+              andPassword:(NSString *)password
+               completion:(BuiltRequestCompletionHandler)completionBlock;
 
+    
 /**
 Asynchronously login using Google OAuth 2.0 access token
  
@@ -369,6 +392,8 @@ Asynchronously login using Google OAuth 2.0 access token
 @param accessToken     Google OAuth 2.0 Access Token
 @param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
  */
+    
+
 - (void)loginWithGoogleAuthAccessToken:(NSString *)accessToken
                                         completion:(BuiltRequestCompletionHandler)completionBlock;
 

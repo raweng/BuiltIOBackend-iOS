@@ -8,7 +8,7 @@
 
 #import <WatchKit/WatchKit.h>
 
-//  sdk-version: 3.1.3
+//  sdk-version: 3.2.0
 
 //! Project version number for BuiltIO-watchOS.
 FOUNDATION_EXPORT double BuiltIO_watchOSVersionNumber;

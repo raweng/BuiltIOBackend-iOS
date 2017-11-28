@@ -1,11 +1,23 @@
-Version: 3.1.3
-Date: 9-Feb-2017
+Version: 3.2.0
+Date: 23-Nov-2017
 
-	NOTE: BuiltGroupMultiple class has been deprecated and will be removed in future release.
+New Features:
+	
+	* BuiltUser:
+		- Added method ‘loginWithUsername:andPassword:completion:()’
 
 Bug Fixes:
 
-	- Fix issue while attempting to reconnect the server when realtime mode is enabled.
+	* BuiltUpload:
+		- fix issue while updating new file for existing file
+
+=====================================================================================
+Version: 3.1.3
+Date: 9-Feb-2017
+
+Bug Fixes:
+
+	- Realtime issue fix while attempting to reconnect the server
 
 =====================================================================================
 
