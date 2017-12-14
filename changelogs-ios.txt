@@ -1,3 +1,37 @@
+Version: 4.0.0
+Date: 14-Dec-2017
+
+Note:
+- Updating SDK version from 3.X.X to 4.X.X will invalid the previous login session. Please refer docs link for more details.
+- Points to Built.io Backend API version v4
+
+New Features: 
+
+	* BuiltUser:
+		- Added method ‘loginWithSSO:’
+		- Added method ‘refreshAccessToken:completion:’
+		- Added method ‘refreshAccessToken:’
+		- Added property ‘accessToken’
+		- Added property ‘refreshToken’
+
+	* BuiltConfig:
+		- Added property ‘persistRefreshToken’
+
+
+Bug Fixes:
+	* BuiltACL:
+		- Fixed issue while applying ACL on Anonymous User 
+
+	*BuiltUser:
+		- Fixed issue while deactivating user causing error while fetching current User and its property.
+
+
+API Deprecation:
+	* BuiltUser:
+		- Removed property ‘authtoken’
+
+
+===================================================================================
 Version: 3.2.0
 Date: 23-Nov-2017
 
@@ -54,7 +88,7 @@ Modifications:
 		- renamed 'addUpsertFormultipleReferenceField:condition:replaceWith:’ to 'addUpsertForReferences:condition:replaceWith:’
 
 
-API deprecation:
+API Deprecation:
 
 	*BuiltUser:
 		- Removed method 'requestPresenceAccess:'	
@@ -97,7 +131,7 @@ Modifications:
 	*BuiltGroup:
 		- Method 'addUpsertForReferenceField:condition:replaceWith:’ removed support for multiple field uid
 
-API deprecation:
+API Deprecation:
 
 	*BuiltPresence:
 		- Removed property 'requests'	
@@ -195,7 +229,7 @@ Modifications:
 Version: 2.2.1
 Date: 14-June-2016
 
-API deprecation:
+API Deprecation:
 
 	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
 	
@@ -250,7 +284,7 @@ Modifications:
 	*QueryResult
 		- method 'count' will return count of objects or total objects count as per the BuiltQuery.
 
-API deprecation:
+API Deprecation:
 
 	NOTE: Synchronous calls from all class is been deprecated and will be removed in future release.
 	
@@ -311,7 +345,7 @@ Bug Fixes:
 	*BuiltACL
 		- fix issue causing multiple permission for Others and Anonymous doesnt work as aspected.
 
-API deprecation:
+API Deprecation:
 
 	*BuiltQuery:
 		- Deprecated method 'includeKey:andValue:'
@@ -396,7 +430,7 @@ Bug Fixes:
 	*BuiltQuery:	
 		- fix issue causing Query to not return any error when there is no active internet connection.
 
-API deprecation:
+API Deprecation:
 	*BuiltObject:
 		- Deprecated method 'upsert:forReferenceField:newDictionary'
 

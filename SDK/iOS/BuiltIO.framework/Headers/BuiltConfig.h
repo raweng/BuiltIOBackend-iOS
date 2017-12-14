@@ -176,6 +176,27 @@ SSL state of Built.io Backend api server.
 @property (nonatomic, assign, getter=isOffline) BOOL offline;
 #endif
 
+
+//MARK: - Persist refresh token
+
+/**---------------------------------------------------------------------------------------
+ * @name Persist refresh token
+ *  ---------------------------------------------------------------------------------------
+ */
+/**
+ Sets whether the refresh token is to persist or not in user session
+ 
+    //Obj-C
+    BuiltConfig *config = [[BuiltConfig alloc] init];
+    config.persistRefreshToken = NO;
+ 
+    //Swift
+    var config:BuiltConfig = BuiltConfig()
+    config.persistRefreshToken = false
+ 
+ */
+@property (nonatomic, assign, getter=isPersistRefreshTokenEnabled) BOOL persistRefreshToken;
+
 @end
 
 BUILT_ASSUME_NONNULL_END

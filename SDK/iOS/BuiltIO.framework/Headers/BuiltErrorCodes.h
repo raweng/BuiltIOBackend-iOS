@@ -91,6 +91,9 @@ FOUNDATION_EXPORT NSInteger const kErrorRealtimePresenceRequestFailed;//507
 FOUNDATION_EXPORT NSInteger const kErrorRealtimeStateSetFailed;//508
 FOUNDATION_EXPORT NSInteger const kErrorRealtimeNotEnabled;//550
 
+//>800 SSO Error
+FOUNDATION_EXPORT NSInteger const kErrorSSOLogin; //800
+
 //>900 TwitterAcccount
 FOUNDATION_EXPORT NSInteger const kErrorTwitterAccountNotFound;//900
 FOUNDATION_EXPORT NSInteger const kErrorTwitterAccountPremissionDenied;//901

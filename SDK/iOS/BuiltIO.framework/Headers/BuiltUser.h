@@ -142,18 +142,32 @@ BUILT_ASSUME_NONNULL_BEGIN
 
 
 /**
- @abstract The authtoken after logging in
+ @abstract The accessToken after logging in
  
-     //Obj-C
-     NSString *authToken = userObject.authtoken;
-     
-     //Swift
-     var authToken:String = userObject.authtoken
+    //Obj-C
+    NSString *accessToken = userObject.accessToken;
+ 
+    //Swift
+    var accessToken:String = userObject.accessToken
  
  
- @discussion The authtoken after logging in
+ @discussion The accessToken after logging in
  */
-@property (nullable, nonatomic, copy, readonly) NSString *authtoken;
+@property (nullable, nonatomic, copy, readonly) NSString *accessToken;
+
+/**
+ @abstract The refreshToken after logging in
+ 
+    //Obj-C
+    NSString *refreshToken = userObject.refreshToken;
+ 
+    //Swift
+    var refreshToken:String = userObject.refreshToken
+ 
+ 
+ @discussion The refreshToken after logging in
+ */
+@property (nullable, nonatomic, copy, readonly) NSString *refreshToken;
 
 
 /**
@@ -729,6 +743,84 @@ Updates the existing user asynchronously
 
 - (void)saveAsDraftEventually:(BuiltRequestCompletionHandler)completionBlock BUILTIO_DEPRECATED("Not for BuiltUser");
 
+//MARK: - SSO Login
+/**---------------------------------------------------------------------------------------
+ * @name SSO Login
+ *  ---------------------------------------------------------------------------------------
+ */
+
+#if TARGET_OS_IOS
+/**
+ Asynchronously login using SSO token
+ 
+    //Obj-C
+    BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+    BuiltUser *ssoUser = [builtApplication user];
+    [ssoUser loginWithSSO:^(BuiltResponseType responseType, NSError *error) {
+ 
+    }];
+ 
+    //Swift
+    var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+    var ssoUser:BuiltUser = builtApplication.user()
+    ssoUser.loginWithSSO { (responseType, error!) -> Void in
+ 
+    }
+ 
+ @param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+ */
+- (void)loginWithSSO:(BuiltRequestCompletionHandler)completionBlock;
+#endif
+
+
+//MARK: - Refresh access token
+/**---------------------------------------------------------------------------------------
+ * @name Refresh access token
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+ Asynchronously refresh the user access_token from server using refresh_token
+ 
+    //Obj-C
+    BuiltUser *userObject = [builtApplication user];
+    [userObject refreshAccessToken:@"blt_sample_refresh_token" completion:^(BuiltResponseType responseType, NSError *error) {
+ 
+    }];
+ 
+    //Swift
+    var userObject:BuiltUser = builtApplication.user()
+    refreshAccessToken("blt_sample_refresh_token") { (responseType, error!) -> Void in
+ 
+    }
+ 
+ @param refreshToken           refresh_token
+ @param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+ 
+    @note If persistRefreshToken property is true in BuiltConfig, you have to use this method for refreshing the user access_token.
+ */
+- (void)refreshAccessToken:(NSString *)refreshToken completion:(BuiltRequestCompletionHandler)completionBlock;
+
+/**
+ Asynchronously refresh the user access_token from server using refresh_token
+ 
+    //Obj-C
+    BuiltUser *userObject = [builtApplication user];
+    [userObject refreshAccessToken:^(BuiltResponseType responseType, NSError *error) {
+ 
+    }];
+ 
+    //Swift
+    var userObject:BuiltUser = builtApplication.user()
+    refreshAccessToken { (responseType, error!) -> Void in
+ 
+    }
+
+ @param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+ 
+    @note If persistRefreshToken property is false in BuiltConfig, you have to use this method for refreshing the user access_token.
+ */
+- (void)refreshAccessToken:(BuiltRequestCompletionHandler)completionBlock;
 
 @end
 
