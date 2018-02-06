@@ -979,6 +979,46 @@ Saves an BuiltObject asyncronously if network is unavailable. Resumes when netwo
  */
 - (void)saveEventually:(BuiltRequestCompletionHandler)completionBlock;
 
+//MARK: - Import Excel
+/**---------------------------------------------------------------------------------------
+ * @name Import Excel
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/**
+Imports excel file asyncronously to Built.io Backend servers.
+ 
+    //Obj-C
+    BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+    BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+    BuiltObject *projectObject  = [projectClass object];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"person.xlsx"];
+    [projectObject importFromExcelWithPath:filePath completion:^(BuiltResponseType responseType, NSError * _Nonnull error) {
+ 
+    }
+ 
+    //Swift
+    var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+    var projectClass:BuiltClass = builtApplication.classWithUID("project")
+    var projectObject:BuiltObject = projectClass.object()
+    let fileManager = FileManager.default
+    if let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+    let filePath = documentsDirectory.appendingPathComponent("person.xlsx").path
+    projectObject.importFromExcel(withPath: filePath, completion: { (response, err) in
+ 
+    })
+    }
+ 
+ @param filePath of a valid excel file we wish to import to.
+ @param completionBlock Completion block with params (BuiltResponseType responseType, NSError *error)
+ 
+ @note filePath should have readable permission
+
+ */
+
+- (void)importFromExcelWithPath:(NSString*)filePath completion:(BuiltRequestCompletionHandler)completionBlock;
 
 //MARK: - Object delete
 /**---------------------------------------------------------------------------------------

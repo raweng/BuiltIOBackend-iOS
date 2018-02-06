@@ -1021,6 +1021,71 @@ Set a raw query to execute.
  */
 - (void)exec:(void (^) (BuiltResponseType type, BuiltQueryResult * BUILT_NULLABLE_P result, NSError * BUILT_NULLABLE_P error))completionBlock;
 
+//MARK: - Export Excel
+/**---------------------------------------------------------------------------------------
+ * @name Export Excel
+ *  ---------------------------------------------------------------------------------------
+ */
+/**
+ exports excel file asyncronously from Built.io Backend server to app
+ 
+     //Obj-C
+      BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+      BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+      BuiltQuery *query = [projectClass query];
+      [query exportToExcel:^(BuiltResponseType responseType, NSString * _Nonnull filePath, NSError * _Nonnull error) {
+ 
+      }
+ 
+      //Swift
+      var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+      var projectClass:BuiltClass = builtApplication.classWithUID("project")
+      let query:BuiltQuery = builtApplication.userQuery()
+      query.export { (responseType, filePath, error) in
+ 
+      }
+     }
+ 
+ @param completionBlock Completion block with params (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error)
+ 
+ */
+- (void)exportToExcel:(void (^) (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error))completionBlock ;
+
+/**
+ exports excel file asyncronously from Built.io Backend server to app
+ 
+      //Obj-C
+      BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+      BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+      BuiltQuery *query = [projectClass query];
+      NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+      NSString *documentsDirectory = [paths objectAtIndex:0];
+      NSString *folderPath = [documentsDirectory stringByAppendingPathComponent:@"/UserFolder"];
+      [query exportToExcelAtPath:folderPath completion:^(BuiltResponseType responseType, NSString * _Nonnull filePath, NSError * _Nonnull error) {
+ 
+      }
+ 
+      //Swift
+      var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+      var projectClass:BuiltClass = builtApplication.classWithUID("project")
+      let query:BuiltQuery = projectClass.userQuery()
+      let fileManager = FileManager.default
+      if let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first {
+      let folderPath = documentsDirectory.appendingPathComponent("/UserFolder").path
+      query.exportToExcel(atPath: folderPath) { (responseType, filePath, error) in
+ 
+      }
+      }
+ 
+ @param folderPath should be valid path with read and write permission where we wish to export to.
+ @param completionBlock Completion block with params (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error)
+ 
+ @note folderPath should have read/write permission.
+ 
+ */
+- (void)exportToExcelAtPath:(NSString*)folderPath completion:(void (^) (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error))completionBlock;
+
+
 //MARK: Cancel execution -
 /**---------------------------------------------------------------------------------------
  * @name Cancel execution
