@@ -78,6 +78,20 @@ SSL state of Built.io Backend api server.
  */
 @property (nonatomic, copy, readonly) NSString *url;
 
+/**
+ Returns the extensionKey in which application will point to.
+ 
+ Obj-C
+ BuiltConfig *config = [[BuiltConfig alloc] init];
+ config.extensionKey = @"new_extension";
+ 
+ //Swift
+ var config:BuiltConfig = BuiltConfig()
+ config.extensionKey = "new_extension"
+ 
+ */
+@property (nonatomic, copy) NSString *extensionKey;
+
 #if TARGET_OS_IOS
 /**---------------------------------------------------------------------------------------
  * @name Backend Realtime API Host

@@ -72,7 +72,7 @@ For Class sync, dictionary would be created, updated, deleted as key containing 
  
 @warning Not supported in watchOS
  */
-@property (nullable, nonatomic, strong) NSDictionary *result;
+@property (nullable, nonatomic, copy) NSDictionary *result;
 
 /**
  Error object if sync fails.

@@ -1,3 +1,44 @@
+Version: 4.2.0
+Date: 01-Mar-2018
+
+Note : Currently extension API with Delete type will not be available.
+
+New Features: 
+
+	* BuiltApplication:
+		- Added property ‘extensionKey’
+		- Added method ‘extension’
+		- Added method ‘extensionWithKey:’
+
+	* BuiltClass:
+		- Added property ‘extensionKey’
+
+	* BuiltConfig:
+		- Added property ‘extensionKey’
+
+	* BuiltObject:
+		- Added property ‘extensionKey’
+
+	* BuiltQuery:
+		- Added property ‘extensionKey’
+
+	* BuiltExtension:
+		- Added enum ‘BuiltRequestType’
+		- Added property ‘requestParams’
+		- Added method ‘execute:’
+		- Added method ‘executeFunction:’
+		- Added method ‘setRequestURL:withRequestType:’
+		- Added method ‘setHeader:forKey:’
+		- Added method ‘addHeadersWithDictionary:’
+		- Added method ‘removeHeaderForKey:’
+
+
+API Deprecation:
+	* BuiltExtension:
+		- Removed method ‘executeWithData:completion:’
+
+
+===================================================================================
 Version: 4.1.0
 Date: 06-Feb-2018
 

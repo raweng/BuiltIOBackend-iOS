@@ -23,7 +23,6 @@
 @class BuiltKeyStore;
 @class BuiltUserRoleMapper;
 
-
 BUILT_ASSUME_NONNULL_BEGIN
 /**
  *  Represents an Application
@@ -228,6 +227,22 @@ BUILT_ASSUME_NONNULL_BEGIN
  */
 @property (nullable, nonatomic, readonly) BuiltKeyStore *keystore;
 
+/**
+ To set extensionKey for the application.
+ // 'blt5d4sample2633b' is a dummy Application API key
+ 
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ builtApplication.extensionKey = @"new_extension";
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ builtApplication.extensionKey = "new_extension";
+ 
+ */
+@property (nonnull, nonatomic, strong) NSString *extensionKey;
+
+
 //MARK: - Initialization
 
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
@@ -387,20 +402,37 @@ BUILT_ASSUME_NONNULL_BEGIN
 /**
  Represents extension in this application
  
-     //'blt5d4sample2633b' is a dummy Application API key
+ //'blt5d4sample2633b' is a dummy Application API key
  
-     //Obj-C
-     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-     BuiltExtension *extensionObject = [builtApplication extensionWithName:@"hello"];
-     
-     //Swift
-     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-     var extensionObject:BuiltExtension = builtApplication.extensionWithName("hello")
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltExtension *extensionObject = [builtApplication extension];
  
- @param extensionName name of extension
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var extensionObject:BuiltExtension = builtApplication.extension()
+ 
  @return Returns an instance of a BuiltExtension.
  */
-- (BuiltExtension *)extensionWithName:(NSString*)extensionName;
+- (BuiltExtension *)extension;
+
+/**
+ Represents extension in this application
+ 
+ //'blt5d4sample2633b' is a dummy Application API key
+ 
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltExtension *extensionObject = [builtApplication extensionWithKey:@"new_extensionKey"];
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var extensionObject:BuiltExtension = builtApplication.extensionWithKey("new_extensionKey")
+ 
+ @param extensionKey key of extension
+ @return Returns an instance of a BuiltExtension.
+ */
+- (BuiltExtension *)extensionWithKey:(NSString*)extensionKey;
 
 #if !TARGET_OS_WATCH
 /**---------------------------------------------------------------------------------------
@@ -708,6 +740,7 @@ Gets the application variables.
 @return value of the specified key
  */
 - (BUILT_NULLABLE NSString *)variableForKey:(NSString *)key;
+
 
 /**---------------------------------------------------------------------------------------
  * @name Application Info

@@ -185,6 +185,25 @@ BuiltLocation object representing latitute and longitude of an object
  */
 @property (nonatomic, strong) BuiltLocation *location;
 
+/**
+ To set extensionKey for the object.
+ // 'blt5d4sample2633b' is a dummy Application API key
+ 
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+ BuiltObject *projectObject  = [projectClass object];
+ projectObject.extensionKey = @"new_extension";
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var projectClass:BuiltClass = builtApplication.classWithUID("project")
+ var projectObject:BuiltObject = projectClass.object()
+ projectObject.extensionKey = "new_extension";
+ 
+ */
+@property (nonnull, nonatomic, strong) NSString *extensionKey;
+
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 
 //MARK: - Headers
@@ -996,8 +1015,7 @@ Imports excel file asyncronously to Built.io Backend servers.
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"person.xlsx"];
     [projectObject importFromExcelWithPath:filePath completion:^(BuiltResponseType responseType, NSError * _Nonnull error) {
- 
-    }
+     }];
  
     //Swift
     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")

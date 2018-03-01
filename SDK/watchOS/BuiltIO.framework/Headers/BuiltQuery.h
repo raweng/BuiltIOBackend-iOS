@@ -16,6 +16,25 @@ BUILT_ASSUME_NONNULL_BEGIN
  */
 @interface BuiltQuery : NSObject
 
+/**
+ To set extensionKey for the query.
+ // 'blt5d4sample2633b' is a dummy Application API key
+ 
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+ BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+ BuiltQuery *projectQuery = [projectClass query];
+ projectQuery.extensionKey = @"new_extension";
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var projectClass:BuiltClass = builtApplication.classWithUID("project")
+ var projectQuery:BuiltQuery = projectClass.query()
+ projectQuery.extensionKey = "new_extension";
+ 
+ */
+@property (nonnull, nonatomic, strong) NSString *extensionKey;
+
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 
 @property (nonatomic, assign) BuiltNetworkCachePolicy cachePolicy;
@@ -1034,8 +1053,7 @@ Set a raw query to execute.
       BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
       BuiltQuery *query = [projectClass query];
       [query exportToExcel:^(BuiltResponseType responseType, NSString * _Nonnull filePath, NSError * _Nonnull error) {
- 
-      }
+      }];
  
       //Swift
       var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
@@ -1044,7 +1062,7 @@ Set a raw query to execute.
       query.export { (responseType, filePath, error) in
  
       }
-     }
+ 
  
  @param completionBlock Completion block with params (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error)
  
@@ -1063,7 +1081,7 @@ Set a raw query to execute.
       NSString *folderPath = [documentsDirectory stringByAppendingPathComponent:@"/UserFolder"];
       [query exportToExcelAtPath:folderPath completion:^(BuiltResponseType responseType, NSString * _Nonnull filePath, NSError * _Nonnull error) {
  
-      }
+     }];
  
       //Swift
       var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
@@ -1075,7 +1093,7 @@ Set a raw query to execute.
       query.exportToExcel(atPath: folderPath) { (responseType, filePath, error) in
  
       }
-      }
+ 
  
  @param folderPath should be valid path with read and write permission where we wish to export to.
  @param completionBlock Completion block with params (BuiltResponseType responseType, NSString * BUILT_NULLABLE_P filePath, NSError * BUILT_NULLABLE_P error)

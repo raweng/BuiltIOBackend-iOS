@@ -4,10 +4,6 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>.DS_Store</key>
-		<data>
-		y8YKedYTNEpd6OPNN46oZQ2ix1M=
-		</data>
 		<key>Headers/Built.h</key>
 		<data>
 		VwwAmdOlxcWyIoTvLMYsZiyAceA=
@@ -34,7 +30,7 @@
 		</data>
 		<key>Headers/BuiltApplication.h</key>
 		<data>
-		KAbbDgdiHHca40Kdkn+Pfbejny8=
+		lOWi4Z1cnzsZByhvnxCrR017Sak=
 		</data>
 		<key>Headers/BuiltClass+Realtime.h</key>
 		<data>
@@ -42,11 +38,11 @@
 		</data>
 		<key>Headers/BuiltClass.h</key>
 		<data>
-		wU7cUK2O+rkTMmEshKrZxiWcjEQ=
+		66ilvkHCmqb3hrRTCWgFAE0kbdA=
 		</data>
 		<key>Headers/BuiltConfig.h</key>
 		<data>
-		pnq0ZK0fTCFYayu9j3qMfTBYWUE=
+		Ys+n9UQyOClBikKW319sS9HyL0U=
 		</data>
 		<key>Headers/BuiltDefinitions.h</key>
 		<data>
@@ -58,7 +54,7 @@
 		</data>
 		<key>Headers/BuiltExtension.h</key>
 		<data>
-		/dSv5WdWgpJhPw5HzFMadaAYRIM=
+		mNZYNNUEr8skYNUClm44KOss5TI=
 		</data>
 		<key>Headers/BuiltGroup.h</key>
 		<data>
@@ -70,7 +66,7 @@
 		</data>
 		<key>Headers/BuiltIO.h</key>
 		<data>
-		A/cK+FOGKyxox7PLpAlJ3EzLc7E=
+		f8O9dVmWZMT/BjfKOG1X7K15oYI=
 		</data>
 		<key>Headers/BuiltIOLocalStore.h</key>
 		<data>
@@ -82,7 +78,7 @@
 		</data>
 		<key>Headers/BuiltInstallation.h</key>
 		<data>
-		NeXBNUWdpL8yWThPWtDS5qz4BRA=
+		KG463fNBrfimld4rQEvNdMELSA0=
 		</data>
 		<key>Headers/BuiltKeyStore.h</key>
 		<data>
@@ -102,7 +98,7 @@
 		</data>
 		<key>Headers/BuiltObject.h</key>
 		<data>
-		HG4Z2IGxpKQFzKQWVd7+Rz1INig=
+		TKjNe7Ghy2LMn3Yq9lxNHez1fAk=
 		</data>
 		<key>Headers/BuiltQuery+LocalStore.h</key>
 		<data>
@@ -110,7 +106,7 @@
 		</data>
 		<key>Headers/BuiltQuery.h</key>
 		<data>
-		O7hMV0aGIH0ligE8ZhOwFcZf1Hg=
+		I3MxQ72UUQVUGmPdqyDicFXNAIE=
 		</data>
 		<key>Headers/BuiltQueryResult.h</key>
 		<data>
@@ -122,7 +118,7 @@
 		</data>
 		<key>Headers/BuiltSyncResult.h</key>
 		<data>
-		SodepL6JOziiiD5GuXPumxr1dWk=
+		GFhBX1NQ4Aefrn425HkBCqIWw0k=
 		</data>
 		<key>Headers/BuiltUpload+Realtime.h</key>
 		<data>
@@ -150,7 +146,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		L0q2ckz/vbjJWr2dBcCa5hE2H7I=
+		AmBk3/tRl1WnWKZZzZfy2NqX3bs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -229,11 +225,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KAbbDgdiHHca40Kdkn+Pfbejny8=
+			lOWi4Z1cnzsZByhvnxCrR017Sak=
 			</data>
 			<key>hash2</key>
 			<data>
-			V5Dh960DQN+bZK15xov6yW8AAykLWHReZQq3wUomNNY=
+			L8rdb4+3jBxo5wdq8i0J6M445KK5m7fqpTpuJd85WEE=
 			</data>
 		</dict>
 		<key>Headers/BuiltClass+Realtime.h</key>
@@ -251,22 +247,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			wU7cUK2O+rkTMmEshKrZxiWcjEQ=
+			66ilvkHCmqb3hrRTCWgFAE0kbdA=
 			</data>
 			<key>hash2</key>
 			<data>
-			WddZB/b1uq6IGINbJ4nYP8Y6diIo/q88Sd6sbiQT4W0=
+			y1bja/55xxX9nBo+U0YnzDcCmHQevMxH6KZkP8F60mE=
 			</data>
 		</dict>
 		<key>Headers/BuiltConfig.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			pnq0ZK0fTCFYayu9j3qMfTBYWUE=
+			Ys+n9UQyOClBikKW319sS9HyL0U=
 			</data>
 			<key>hash2</key>
 			<data>
-			V6UCu56ApMsaYF0TwMHKWSA+NYiO9QzUBgCa2BWglVk=
+			d0x/yStYhl16p/PSIz61MGzRb7+gdpAzegBFkTR8dDo=
 			</data>
 		</dict>
 		<key>Headers/BuiltDefinitions.h</key>
@@ -295,11 +291,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/dSv5WdWgpJhPw5HzFMadaAYRIM=
+			mNZYNNUEr8skYNUClm44KOss5TI=
 			</data>
 			<key>hash2</key>
 			<data>
-			YMVAK7eAD/LhFWzLIa7n2+mZt2R2aDHfnIuQuSKbZu0=
+			u6z+/YMD2yvxaymWOX6GO9F3SWAXL+4wJK6yqHilRRU=
 			</data>
 		</dict>
 		<key>Headers/BuiltGroup.h</key>
@@ -328,11 +324,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			A/cK+FOGKyxox7PLpAlJ3EzLc7E=
+			f8O9dVmWZMT/BjfKOG1X7K15oYI=
 			</data>
 			<key>hash2</key>
 			<data>
-			/4e3MuBI388gfQ294xYbQZMF/UMUbK/3phSFZtFT2Cw=
+			R+kmV1GT9wkphPLAO+93RxiWYo1imrv31MO/Tv2lCJg=
 			</data>
 		</dict>
 		<key>Headers/BuiltIOLocalStore.h</key>
@@ -361,11 +357,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			NeXBNUWdpL8yWThPWtDS5qz4BRA=
+			KG463fNBrfimld4rQEvNdMELSA0=
 			</data>
 			<key>hash2</key>
 			<data>
-			otcA8AY8I05KGXBCfAayzpiZVUq8X5lYzMuh8ivXkq8=
+			lJpitiuKJeSCXp0Tn2qmP/fVwiTbPvebpRswB52lJRs=
 			</data>
 		</dict>
 		<key>Headers/BuiltKeyStore.h</key>
@@ -416,11 +412,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			HG4Z2IGxpKQFzKQWVd7+Rz1INig=
+			TKjNe7Ghy2LMn3Yq9lxNHez1fAk=
 			</data>
 			<key>hash2</key>
 			<data>
-			whOKKctheLS3Rs7kD03kyDk+3uAlJNWC9Jj/uahDPXo=
+			V4t3wREqgC0baaMeLUTVFmFx5sjG2wXmBjwUcwpqXw4=
 			</data>
 		</dict>
 		<key>Headers/BuiltQuery+LocalStore.h</key>
@@ -438,11 +434,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			O7hMV0aGIH0ligE8ZhOwFcZf1Hg=
+			I3MxQ72UUQVUGmPdqyDicFXNAIE=
 			</data>
 			<key>hash2</key>
 			<data>
-			6YLELF23Eakvn/GGbrl94NPnoVCXWhMyRCK77VXC9as=
+			8avzeOYxwt+HnQCrve/fCgFYgiRjFBDor/9RlR/cI+M=
 			</data>
 		</dict>
 		<key>Headers/BuiltQueryResult.h</key>
@@ -471,11 +467,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SodepL6JOziiiD5GuXPumxr1dWk=
+			GFhBX1NQ4Aefrn425HkBCqIWw0k=
 			</data>
 			<key>hash2</key>
 			<data>
-			54yH8yymoDmvpKUxLt5bcYdLdpElRlAwHxY3kriAgyI=
+			Q+cNhrOQypOKIRRAV1DJ4vkIaJOoNtMQyyD2rKuzq9k=
 			</data>
 		</dict>
 		<key>Headers/BuiltUpload+Realtime.h</key>

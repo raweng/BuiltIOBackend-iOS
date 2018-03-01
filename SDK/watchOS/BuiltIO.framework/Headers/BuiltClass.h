@@ -19,6 +19,23 @@ BUILT_ASSUME_NONNULL_BEGIN
  */
 @interface BuiltClass : NSObject
 
+/**
+ To set extensionKey for the class.
+ // 'blt5d4sample2633b' is a dummy Application API key
+ 
+ //Obj-C
+ BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+  BuiltClass *projectClass = [builtApplication classWithUID:@"project"];
+ projectClass.extensionKey = @"new_extension";
+ 
+ //Swift
+ var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+ var projectClass:BuiltClass = builtApplication.classWithUID("project")
+ projectClass.extensionKey = "new_extension";
+ 
+ */
+@property (nonnull, nonatomic, strong) NSString *extensionKey;
+
 - (instancetype)init UNAVAILABLE_ATTRIBUTE;
 
 //MARK: - Headers
@@ -84,7 +101,6 @@ Removes a header from this application.
 @param headerKey The header key that needs to be removed
  */
 - (void)removeHeaderForKey:(NSString *)headerKey;
-
 
 //MARK: - New Instance
 
