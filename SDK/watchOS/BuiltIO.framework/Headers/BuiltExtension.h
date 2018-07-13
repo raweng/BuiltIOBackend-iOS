@@ -70,7 +70,7 @@ typedef NS_ENUM(NSUInteger, BuiltRequestType) {
  @param completion this block will be called after network call if success `responseObject` will contain the response from the extension method or else nil. `error` object will contain error if any.
  
 */
-- (void)execute:(void (^)(BuiltResponseType responseType, id responseObject, NSError *error))completionBlock;
+- (void)execute:(void (^)(BuiltResponseType responseType, id BUILT_NULLABLE_P responseObject, NSError  * BUILT_NULLABLE_P error))completionBlock;
 
 /**
  @abstract Makes a call to an extension function asynchronously.
@@ -94,7 +94,7 @@ typedef NS_ENUM(NSUInteger, BuiltRequestType) {
  @param completion this block will be called after network call if success `responseObject` will contain the response from the extension method or else nil. `error` object will contain error if any.
  
  */
-- (void)executeFunction:(void (^)(BuiltResponseType responseType, id responseObject, NSError *error))completionBlock;
+- (void)executeFunction:(void (^)(BuiltResponseType responseType, id BUILT_NULLABLE_P responseObject, NSError * BUILT_NULLABLE_P error))completionBlock;
 
 /**
  @abstract set request url and request type.

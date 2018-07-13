@@ -639,31 +639,29 @@ Fetch user uid asynchronously by providing twiiter user id
  */
 
 /**
-Activate a user asynchronously.
+ Activate a user asynchronously.
  
-     //'bltba9a44506dd9e741' is a uid of an object of inbuilt Application User class
+ //'bltba9a44506dd9e741' is a uid of an object of inbuilt Application User class
  
-     //Obj-C
-     BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
-     BuiltUser *userObject = [builtApplication user];
-     [userObject  activateUserWithUserId:@"bltba9a44506dd9e741" andActivationToken:@"saMpLeaTivAtioNtoKeN" completion:^(BuiltResponseType responseType, NSError *error) {
-     
-     }];
-     
-     //Swift
-     var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
-     var userObject:BuiltUser = builtApplication.user()
-     userObject.activateUserWithUserId("bltba9a44506dd9e741", andActivationToken:"saMpLeaTivAtioNtoKeN") { (responseType, error!) -> Void in
-     
-     }
+      //Obj-C
+      BuiltApplication *builtApplication = [Built applicationWithAPIKey:@"blt5d4sample2633b"];
+      BuiltUser *userObject = [builtApplication user];
+      [userObject  activateUserWithUserId:@"bltba9a44506dd9e741" andActivationToken:@"saMpLeaTivAtioNtoKeN" completion:^(BuiltResponseType responseType, NSError *error) {
  
-@param userId          user id of the user to activate
-@param token           activation token
-@param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
+      }];
+ 
+      //Swift
+      var builtApplication:BuiltApplication = Built.applicationWithAPIKey("blt5d4sample2633b")
+      var userObject:BuiltUser = builtApplication.user()
+      userObject.activateUserWithUserId("bltba9a44506dd9e741", andActivationToken:"saMpLeaTivAtioNtoKeN") { (responseType, error!) -> Void in
+ 
+      }
+ 
+ @param userId          user id of the user to activate
+ @param token           activation token
+ @param completionBlock Completion block with params (BuiltResponseType responseType, id responseJSON, NSError *error)
  */
-- (void)activateUserWithUserId:(NSString *)userId
-                        andActivationToken:(NSString *)token
-                                completion:(BuiltRequestCompletionHandler)completionBlock;
+- (void)activateUserWithUserId:(NSString *)userId andActivationToken:(NSString *)token completion:(BuiltRequestCompletionHandler)completionBlock;
 
 /**
 Deactivates user's account on Built.io Backend asynchronously

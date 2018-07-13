@@ -102,6 +102,62 @@ BUILT_ASSUME_NONNULL_BEGIN
  @return Returns the count of number of object returned by BuiltQuery.
  */
 - (NSInteger)count;
+/**
+ @abstract Count of number of created objects returned by BuiltQuery.
+ 
+ //Obj-C
+ [projectQuery exec:^(BuiltResponseType type, BuiltQueryResult *result, NSError *error) {
+ NSInteger createdCount = [result createdCount];
+ }];
+ 
+ 
+ //Swift
+ projectQuery.exec { (responseType, queryResult!, error!) -> Void in
+ var createdCount:Int  =  queryResult.createdCount()
+ }
+ 
+ 
+ @return Returns the count of number of createdCount objects returned by BuiltQuery.
+ */
+- (NSInteger)createdCount;
+
+/**
+ @abstract Count of number of updated objects returned by BuiltQuery.
+ 
+ //Obj-C
+ [projectQuery exec:^(BuiltResponseType type, BuiltQueryResult *result, NSError *error) {
+ NSInteger updatedCount = [result updatedCount];
+ }];
+ 
+ 
+ //Swift
+ projectQuery.exec { (responseType, queryResult!, error!) -> Void in
+ var updatedCount:Int  =  queryResult.updatedCount()
+ }
+ 
+ 
+ @return Returns the count of number of updated objects returned by BuiltQuery.
+ */
+- (NSInteger)updatedCount;
+
+/**
+ @abstract Count of number of deleted objects returned by BuiltQuery.
+ 
+ //Obj-C
+ [projectQuery exec:^(BuiltResponseType type, BuiltQueryResult *result, NSError *error) {
+ NSInteger deletedCount = [result deletedCount];
+ }];
+ 
+ 
+ //Swift
+ projectQuery.exec { (responseType, queryResult!, error!) -> Void in
+ var deletedCount:Int  =  queryResult.deletedCount()
+ }
+ 
+ 
+ @return Returns the count of number of deleted objects returned by BuiltQuery.
+ */
+- (NSInteger)deletedCount;
 
 /**
  @abstract Get array of updated objects returned by BuiltDelta.

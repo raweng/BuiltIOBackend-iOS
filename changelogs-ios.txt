@@ -1,3 +1,22 @@
+Version: 4.3.0
+Date: 13-July-2018
+
+New Features: 
+
+	* BuiltApplication:
+		- Added method ‘syncWithPagination’
+		- Added method ‘syncOnlyWithPagination:’
+		- Added method ‘syncExceptWithPagination:’
+
+	* BuiltQueryResult:
+		- Added method ‘createdCount’
+		- Added method ‘updatedCount’
+		- Added method ‘deletedCount’
+
+Bug Fixes:
+	- Issue while downloading data and Image using BuiltUpload fixed.
+
+===================================================================================
 Version: 4.2.0
 Date: 01-Mar-2018
 
