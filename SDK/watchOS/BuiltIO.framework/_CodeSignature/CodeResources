@@ -54,7 +54,7 @@
 		</data>
 		<key>Headers/BuiltIO.h</key>
 		<data>
-		keBcQiFsWefFCxmbVgd/yD8Q2/w=
+		1ydVCUjZMe2hDD28uGk+hfiaTQ8=
 		</data>
 		<key>Headers/BuiltKeyStore.h</key>
 		<data>
@@ -86,7 +86,7 @@
 		</data>
 		<key>Headers/BuiltUser.h</key>
 		<data>
-		S5LzFXf6ndE9/r7s+GfC3Kd1hZM=
+		AQPWHDiOrKh3aaN7mF31PwCVPMg=
 		</data>
 		<key>Headers/BuiltUserRoleMapper.h</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		QHnAciKo48krox62BJiH1CcvEcs=
+		vdkfDmyUEsGryjKk+SUTMjj1Vi0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -239,11 +239,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			keBcQiFsWefFCxmbVgd/yD8Q2/w=
+			1ydVCUjZMe2hDD28uGk+hfiaTQ8=
 			</data>
 			<key>hash2</key>
 			<data>
-			4AD9DCA6nLZaK2COL9KYJjElP8V9xLOi/Ad0EXZ5SUA=
+			qbrCa8kC8oHWdOrsaDj0obwOL45B5MsAHyQ1UK9k2qM=
 			</data>
 		</dict>
 		<key>Headers/BuiltKeyStore.h</key>
@@ -327,11 +327,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			S5LzFXf6ndE9/r7s+GfC3Kd1hZM=
+			AQPWHDiOrKh3aaN7mF31PwCVPMg=
 			</data>
 			<key>hash2</key>
 			<data>
-			g85QFh9AY8WekLbIJWKTEO2wnZuv56n6HRRtQTrebCU=
+			zoVe7vSzNUWStGnxQDbw+njZH1yCOaFtbogyPhDTfTk=
 			</data>
 		</dict>
 		<key>Headers/BuiltUserRoleMapper.h</key>
@@ -359,7 +359,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -390,24 +390,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -443,13 +431,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

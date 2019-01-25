@@ -1,3 +1,25 @@
+
+Version: 4.3.1
+Date: 25-January-2019
+
+New Features: 
+
+	* BuiltUser:
+		- Added method ‘clearSession’
+		- Added method ‘saveSession’
+
+	* Support for architecture armv7k added for watchOS.
+
+Bug Fixes:
+	* BuiltUser:
+		- Fixed Crash issue while using 'removeFromCurrentUser' method when upgrading from v2 to v4.
+
+API Deprecation:
+	* BuiltUser:
+		- Deprecated method ‘removeFromCurrentUser’
+		- Deprecated method ‘setAsCurrentUser’
+
+===================================================================================
 Version: 4.3.0
 Date: 13-July-2018
 

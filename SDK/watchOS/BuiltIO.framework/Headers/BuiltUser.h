@@ -256,55 +256,81 @@ Access token from facebook used to log a user into your application
 
 ////MARK: - User Session
 
-/**---------------------------------------------------------------------------------------
- * @name User Session
- *  ---------------------------------------------------------------------------------------
- */
-
 /**
-Mark user as current user which is persisted on disk.
+ Mark user as current user which is persisted on disk.
  
      //Obj-C
      [userObject setAsCurrentUser];
-     
+ 
      //Swift
      userObject.setAsCurrentUser()
  
+ @warning This method has been deprecated.
+
  */
-- (void)setAsCurrentUser;
+
+- (void)setAsCurrentUser __attribute__((deprecated("This method is deprecated. Please use saveSession()")));
 
 /**
-Clears User Session
+ Clears User Session
  
      //Obj-C
      [userObject removeFromCurrentUser];
-     
+ 
      //Swift
      userObject.removeFromCurrentUser()
- 
+
+ @warning This method has been deprecated.
+
  */
-- (void)removeFromCurrentUser;
+- (void)removeFromCurrentUser __attribute__((deprecated("This method is deprecated. Please use clearSession()")));
 
 /**
-Checks whether the user is currently logged in.
+ Mark user as current user which is persisted on disk.
+ 
+     //Obj-C
+     [userObject saveSession];
+ 
+     //Swift
+     userObject.saveSession()
+ 
+ */
+- (void)saveSession;
+
+/**
+ Clears User Session
+ 
+     //Obj-C
+     [userObject clearSession];
+ 
+     //Swift
+     userObject.clearSession()
+ 
+ */
+- (void)clearSession;
+
+
+/**
+ Checks whether the user is currently logged in.
  
      //Obj-C
      if ([userObject isAuthenticated]) {
-        //Authenticated
+     //Authenticated
      } else {
-       //Not authenticated
+     //Not authenticated
      }
-     
+ 
      //Swift
      if (userObject.isAuthenticated()) {
-        //Authenticated
-     } else {
-        //Not authenticated
+     //Authenticated
+      else {
+     //Not authenticated
      }
  
  
-@return returns TRUE/FALSE
+ @return returns TRUE/FALSE
  */
+
 - (BOOL)isAuthenticated;
 
 
